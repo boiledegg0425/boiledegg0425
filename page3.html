@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery3.7.1.js"></script>
+    <script src="https://kit.fontawesome.com/4149e87681.js" crossorigin="anonymous"></script>
+    <link href="https://db.onlinewebfonts.com/c/312e1b153109eaeffbcd9227eaa6519b?family=Nimbus+Sans+Extd+D+W01+Light" rel="stylesheet">
+
+    <script>
+        $(function(){
+
+            $('#section1').on('mouseover', function(){
+
+                 $('nav').show();
+            })
+
+             $('#section1').on('mouseout', function(){
+
+                  $('nav').hide();
+             })
+
+        })
+    </script>
+    <style>
+        * {margin:0; padding:0;}
+        #wrap {font-family: "Nimbus Sans Extd D W01 Light";
+               background:papayawhip;
+               width:100%;
+               height:100vh;}
+
+        #section1 {height:200px;}
+
+        #section1 p {font-size:120pt;}
+
+        .p1 {color:palevioletred;}
+
+        #section1 nav {background:white;
+                       height:200px;
+                       width:100%;
+                       z-index:150;
+                       position:fixed;
+                       left:0px;
+                       top:0px;}
+
+        #section1 nav ul {text-align:center;
+                          width:700px;
+                          position:absolute;
+                          left:590px;
+                          top:150px;}
+
+        #section1 li {display:inline-block;
+                      margin-right:30px;}
+
+        #section1 nav a {color:black;
+                         text-decoration:none;
+                         font-size:30pt;}
+
+        /*-------------------섹션2----------------*/
+
+        #section2>video {position:fixed;
+                          left:650px;
+                         width:800px;}
+                
+        .big_video {padding:10px;}
+
+        #video_box {position:fixed;
+                    left:350px;
+                    top:210px;
+                    width:300px;
+                    height:500px;}
+
+        #video_box>video {width:300px;
+                          height:fit-content;
+                          cursor:pointer;}
+
+
+        /*-------------------섹션3----------------*/
+         
+        #text_box {width:700px;
+                   height:150px;
+                  overflow:hidden;
+                  position:fixed;
+                  left:720px;
+                  top:720px;}
+
+        #text_box>p {text-align:center;
+                      animation:130s flow_text linear infinite;}
+
+        @keyframes flow_text {
+
+           from {trnasform:translateY(0px)}
+   
+           to {transform:translateY(-1400px)}
+
+        }
+
+    </style>
+</head>
+<body>
+   <div id="wrap">
+      <section id="section1">
+         <p class="p1">LOGO</p>
+          <nav>
+            <p class="p2">LOGO</p>
+             <ul>
+                <li><a href="page1.html">FIRST/</a></li>
+                <li><a href="page2.html">SECOND</a></li>
+                <li><a href="page3.html">/THIRD</a></li>
+             </ul>
+          </nav>
+          
+      </section>
+
+      <section id="section2">
+          <video src="영상/꽃.mp4" class="big_video" autoplay loop></video>
+          <div id="video_box">
+              <video src="영상/계곡.mp4" class="video1"></video>
+              <video src="영상/꽃.mp4" class="video1"></video>
+              <video src="영상/바다.mp4" class="video1"></video>
+              <video src="영상/겨울.mp4" class="video1"></video>
+          </div>
+      </section>
+
+      <section id="section3">
+          <div id="text_box">
+             <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, corrupti nam. Impedit soluta exercitationem esse expedita quos ullam inventore odio dignissimos maxime, magni consequatur quaerat ratione odit similique, numquam sequi.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quaerat eius officiis voluptas omnis animi soluta aliquid nesciunt ex dolorum, similique error quibusdam sint nemo perferendis iure tempora laboriosam doloremque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi consequatur ipsa maiores atque aperiam iure veritatis laborum numquam adipisci molestias voluptate nam nulla, iste ab expedita dolorem possimus perferendis corrupti.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quibusdam eum consequatur corporis deleniti iure repudiandae dolor maxime debitis dignissimos excepturi ab consequuntur aliquam autem quidem totam praesentium amet maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maxime illum non nam iure aperiam vel reiciendis ex nulla veniam, quo illo omnis vitae eos voluptatibus? Quidem, eveniet aliquid? Quam!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae accusamus sit animi est autem doloribus cumque, dignissimos commodi, ab, necessitatibus maiores dolorem. Saepe corporis cumque vitae eum neque, repellendus laborum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugiat, assumenda maiores reiciendis iure sint reprehenderit dignissimos numquam inventore. Itaque beatae magni quibusdam eveniet quos illo consequuntur eum obcaecati fuga!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur provident est blanditiis atque quaerat error nisi consectetur harum dicta asperiores odio, nobis optio architecto alias dolorum eum aliquid in recusandae?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nostrum sint nemo nisi cum voluptatibus, blanditiis asperiores magnam odit aliquid alias ab debitis assumenda, quia perferendis facilis, quo at possimus?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae quidem vitae voluptatum ratione ipsa aut esse illum, architecto nemo. Suscipit neque voluptatem aliquam! In fugit similique perspiciatis quis voluptas unde?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ipsam perferendis rerum ab id ipsum temporibus optio officiis error sed nulla quis deleniti tenetur recusandae dolorem earum a? Officia, ratione?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic id quisquam voluptas nesciunt sapiente deserunt, animi laborum vitae tempora molestias laboriosam consectetur at nobis repellendus. Nobis quod enim dolore!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima explicabo, reprehenderit est quibusdam numquam facilis doloribus vitae aut consectetur rem eligendi distinctio esse nostrum harum pariatur ratione illum iure. Esse?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem neque dolores. Similique quis a ad blanditiis minima dolorum aliquid illum? Nisi aspernatur totam porro? Iure fugiat quae temporibus aliquid.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eaque quis nobis odio, dolorum doloribus reprehenderit, provident velit et ullam sequi adipisci repudiandae, hic ipsa amet ad consectetur inventore architecto.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis nihil assumenda molestias eos praesentium saepe fuga autem cumque. Magni earum nulla neque aperiam quos illo, quia ipsa vel culpa minima.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga iusto qui, illum, quod quibusdam iure sed nostrum in dolorem, optio maxime eaque obcaecati quos officia beatae ipsum omnis soluta error!
+             </p>
+          </div>
+      </section>
+   </div>
+</body>
+<script>
+    let big_video = document.querySelector('.big_video');
+    let small_video = document.querySelectorAll('.video1');
+    for(let i=0; i<small_video.length; i++) {
+        small_video[i].addEventListener('click', function(){
+            let kkk = this.src;
+            big_video.setAttribute('src', kkk);
+
+        })
+    }
+</script>
+</html>

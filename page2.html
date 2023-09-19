@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery3.7.1.js"></script>
+    <script src="https://kit.fontawesome.com/4149e87681.js" crossorigin="anonymous"></script>
+    <link href="https://db.onlinewebfonts.com/c/312e1b153109eaeffbcd9227eaa6519b?family=Nimbus+Sans+Extd+D+W01+Light" rel="stylesheet">
+
+    <script>
+        $(function(){
+
+            $('#section1').on('mouseover', function(){
+
+                 $('nav').show();
+            })
+
+             $('#section1').on('mouseout', function(){
+
+                  $('nav').hide();
+             })
+
+             let n = 0;
+             let pos = 0;
+
+             setInterval(function(){
+
+                 if(n<3) {
+                    n++;
+                 }
+                 else {
+                    n=0;
+                 }
+                pos = n*(-889);
+                $('#video_box2').animate({'margin-left': pos}, 2000);
+        }, 5000)
+
+     })
+    </script>
+    <style>
+        * {margin:0; padding:0;}
+        #wrap {font-family: "Nimbus Sans Extd D W01 Light";
+               background:papayawhip;
+               width:100%;
+               height:100vh;}
+
+        #section1 {height:200px;}
+
+        #section1 p {font-size:120pt;}
+
+        .p1 {color:palevioletred;}
+
+        #section1 nav {background:white;
+                       height:200px;
+                       width:100%;
+                       z-index:150;
+                       position:fixed;
+                       left:0px;
+                       top:0px;}
+
+        #section1 nav ul {text-align:center;
+                          width:700px;
+                          position:absolute;
+                          left:590px;
+                          top:150px;}
+
+        #section1 li {display:inline-block;
+                      margin-right:30px;}
+
+        #section1 nav a {color:black;
+                         text-decoration:none;
+                         font-size:30pt;}
+
+        /*-------------------섹션2----------------*/
+
+        #section2 {overflow:hidden;
+                     width:800px;
+                     height:500px;
+                     position:absolute;
+                     left:200px;
+                     top:300px;}
+
+        #video_box2 {width:889px;
+                     height:500px;
+                     display:flex;}
+
+        #video_box2>video {width:889px;}
+
+        /*-------------------섹션3----------------*/
+
+        #section3 {width:600px;
+                   position:relative;
+                   left:1100px;
+                   top:150px;}
+
+        #icon {margin:20px;}
+
+        #icon>i {margin-right:20px;}
+    </style>
+</head>
+<body>
+   <div id="wrap">
+      <section id="section1">
+         <p class="p1">LOGO</p>
+          <nav>
+            <p class="p2">LOGO</p>
+             <ul>
+                <li><a href="page1.html">FIRST/</a></li>
+                <li><a href="page2.html">SECOND</a></li>
+                <li><a href="page3.html">/THIRD</a></li>
+             </ul>
+          </nav>
+          
+      </section>
+
+      <section id="section2">
+        <div id="video_box2">
+          <video src="영상/수련.mp4" autoplay loop></video>
+          <video src="영상/꽃.mp4" autoplay loop></video>
+          <video src="영상/바다.mp4" autoplay loop></video>
+        </div>
+      </section>
+
+      <section id="section3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis accusamus consequatur tempora illum aliquam. Aspernatur in provident asperiores maiores quas, velit id reiciendis voluptas incidunt eligendi consequuntur similique quidem eaque?
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum laborum suscipit sapiente velit eaque culpa, tempore esse. Obcaecati, dolorem, ad qui consectetur ducimus repellendus molestiae cupiditate numquam consequatur voluptatem praesentium.
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sed quisquam corrupti. Adipisci officia, ipsum veritatis voluptate debitis repellat nisi iusto cum nobis eos maiores dicta accusamus neque recusandae sit?
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi alias officia non tempora deserunt itaque ea omnis quia! Ab, asperiores! Obcaecati, velit facere delectus distinctio aliquid ratione reprehenderit voluptatibus. Magnam.
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias dignissimos repellendus consequuntur sed dolore voluptate vero, minus expedita consectetur enim asperiores illo odit fugiat excepturi adipisci nisi mollitia? Doloremque.
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo culpa numquam vitae, accusantium ex, neque ipsa sit dolor voluptatum impedit ut atque ea provident et quibusdam, id nostrum. Quibusdam, soluta.
+        </p>
+
+        <div id="icon">
+           <i class="fa-brands fa-twitter fa-2xl" style="color: #000000;"></i>
+           <i class="fa-brands fa-facebook fa-2xl" style="color: #000000;"></i>
+           <i class="fa-brands fa-instagram fa-2xl" style="color: #000000;"></i>
+        </div>
+      </section>
+   </div>
+</body>
+<script>
+
+</script>
+</html>
