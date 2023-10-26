@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
+  
+    <script src="js/jquery3.7.1.js"></script>
+    <title>Document</title>
+
+    <script>
+      
+    </script>
+
+    <style>
+        html {scroll-behavior:smooth;}
+        * {margin:0; padding:0;
+           font-family:'Miller';}
+
+       #wrap {background:rgb(54, 141, 54);}
+
+        #nav {height:900px;}
+
+       .nav-text {
+                   font-size:50pt;
+                   color:white;
+                  border-bottom:2px solid white;}
+
+        .nav-text:hover {
+                          text-shadow:10px 0px black}
+
+        #nav>ul {list-style:none;
+                 display:flex;
+                 justify-content:space-between;
+                 border-bottom:2px solid white;}
+
+        #nav>ul>li>a {color:white;
+                      text-decoration:none;
+                      font-size:30pt;}
+
+        #nav>ul>li>a:hover {text-shadow:5px 0px black;}
+
+        #nav .hi1 {color:white;
+                    font-size:50pt;}
+
+        #nav .hi2 {color:white;
+                    font-size:30pt;
+                    margin-top:320px;
+                   text-align:center;}
+
+        #tree-box #hi3 {color:white;
+                    font-size:50pt;
+                   width:1600px;
+                   height:150px;}
+
+        #tree-box {width:1600px;
+                   margin:0 auto;
+                   display:flex;
+                   flex-flow:wrap;}
+
+        .tree>img {width:500px;
+                   height:600px;
+                   margin:25px;}
+
+        .tree {width:545px;
+               height:800px;
+               margin:20px auto;
+               border-top:1px solid white;}
+
+        .tree>p {color:white;
+                 width:500px;
+                 margin:0 auto;}
+
+        .tree>h2 {margin:20px;
+                 color:white;}
+
+        #me-box {border-top:5px solid white;
+                 width:1600px;
+                margin:0 auto;}
+
+        .hi4 {font-size:50pt;
+             color:white;
+             margin-bottom:100px;}
+
+        .hi5{
+            display:inline-block;
+            border:1px solid white;
+            width:390px;
+            font-size:40pt;
+             color:white;
+            vertical-align:text-top;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="nav-text">PORTFOLIO</h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="#">MAIN</a></li>
+                <li><a href="#hi3">MY WORK</a></li>
+                <li><a href="#">ABOUT ME</a></li>
+                <li><a href="#">ABILITY</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <h1 class="hi1">hi&emsp;i'm Mun Jung&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="clock">00:00</span></h1>
+            <p class="hi2">저는 어쩌구 저쩌구한 웹퍼블리셔 입니다. 저를 고용하시려면<br>
+                돈을 많이 주셔야 합니다. 감사합니다.
+            </p>
+        </nav>
+
+        <main id="main">
+            <div id="tree-box">
+                <h1 id="hi3">-My work</h1>
+                <div class="tree">
+                    <h2>01/</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni perspiciatis praesentium excepturi, dolore quis dolor suscipit fugiat nobis facere in molestias! Cumque aspernatur maxime recusandae magni nobis aliquid, ea voluptatem!</p>
+                    <img src="../tree2.JPG">
+                </div>
+            
+                <div class="tree">
+                    <h2>02/</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni perspiciatis praesentium excepturi, dolore quis dolor suscipit fugiat nobis facere in molestias! Cumque aspernatur maxime recusandae magni nobis aliquid, ea voluptatem!</p>
+                    <img src="../tree2.JPG">
+                </div>
+ 
+                <div class="tree">
+                    <h2>03/</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni perspiciatis praesentium excepturi, dolore quis dolor suscipit fugiat nobis facere in molestias! Cumque aspernatur maxime recusandae magni nobis aliquid, ea voluptatem!</p>
+                    <img src="../tree2.JPG">
+                </div>
+
+                <div class="tree">
+                    <h2>04/</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni perspiciatis praesentium excepturi, dolore quis dolor suscipit fugiat nobis facere in molestias! Cumque aspernatur maxime recusandae magni nobis aliquid, ea voluptatem!</p>
+                    <img src="../tree2.JPG">
+                </div>
+            </div>
+
+            <div id="me-box">
+               <h1 class="hi4">-about me</h1>
+               <p class="hi5">
+               i like&emsp;coffee / christmas / friends / winter / summer / music / swim<br>
+               </p>
+               <p class="hi5">my birthday / 1993 04 25 / my zodiac sign is taurus</p>
+               <p class="hi5">Lorem ipsum dolor, sit amet consectetur adipisicing adipisicing</p>
+               <p class="hi5">Lorem ipsum dolor, sit amet consectetur adipisicing adipisicing</p>
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+    let clock = document.getElementById("clock");
+
+    function getClock() {
+
+        let today = new Date();
+        let hours = today.getHours() % 12 ? today.getHours() % 12 : 12;
+        let minutes = today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes();
+        let ampm = today.getHours() >= 12 ? 'pm' : 'am';
+
+        clock.innerText = `${ampm} ${hours}:${minutes}`;
+    }
+    getClock();
+    setInterval(getClock, 1000);
+</script>
+</html>
