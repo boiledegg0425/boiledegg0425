@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
+  
+    <script src="js/jquery3.7.1.js"></script>
+    <!--fade up-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+    <title>Document</title>
+
+    <script>
+      
+    </script>
+
+    <style>
+        html {scroll-behavior:smooth;}
+
+        * {margin:0; padding:0;
+           font-family:'Miller', 'ChosunSm';}
+
+        @font-face {
+                font-family: 'ChosunSm';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+                unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF;
+        }
+
+        #wrap {background:rgb(27, 135, 65);}
+
+        #nav {height:900px;}
+
+       .nav-text {
+                   font-size:50pt;
+                   cursor:pointer;
+                   color:white;
+                  border-bottom:2px solid white;}
+
+        .nav-text:hover {
+            text-shadow:10px 0px black
+        }
+
+        #nav>ul {list-style:none;
+                 display:flex;
+                 justify-content:space-between;
+                 border-bottom:2px solid white;}
+
+        #nav>ul>li>a {color:white;
+                      text-decoration:none;
+                      font-size:30pt;}
+
+        #nav>ul>li>a:hover {text-shadow:5px 0px black;}
+
+        #nav .hi1 {color:white;
+                    font-size:50pt;}
+
+        #nav .hi2 {color:white;
+                    font-size:30pt;
+                    margin-top:320px;
+                   text-align:center;}
+
+        #clock {
+            float:right;
+        }
+
+        .btn {
+            position:fixed;
+              right:30px;
+              top:850px;
+              z-index:30;
+              cursor:pointer;
+              width:75px;
+              height:35px;
+              line-height:35px;
+              text-align:center;
+              background:rgb(27, 135, 65);
+              border:1px solid white;
+              border-radius:20px;
+              font-size:20pt;
+        }
+
+        .btn>a {
+            color:white;
+            text-decoration:none;}
+
+        .btn:hover {text-shadow:5px 0px black;
+                    scale:1.2;}
+
+        #work-box #hi3 {color:white;
+                    font-size:50pt;
+                   width:1600px;
+                   height:150px;}
+
+        #work-box {width:1600px;
+                   margin:0 auto;
+                   display:flex;
+                   flex-flow:wrap;}
+
+        .work>a>img {
+            width:750px;
+            height:350px;
+            margin:10px;
+            transition:0.5s;
+        }
+
+        .work {width:770px;
+               height:510px;
+               margin:13px;
+               border-top:1px solid white;}
+
+        .work>p {color:white;
+                 width:500px;
+                 text-align:center;
+                 margin:0 auto;}
+
+        .work>h2 {margin:20px;
+                 color:white;}
+
+        .work>a>img:hover {
+            filter:brightness(0.2);
+            scale:1.2;
+            transition:0.5s;
+        }
+
+        #me-box {border-top:5px solid white;
+                 width:1600px;
+                margin:0 auto;}
+
+        .b-line {border-right:3px solid white;}
+
+        .hi4 {font-size:50pt;
+             color:white;
+             margin-top:50px;
+             margin-bottom:50px;}
+
+        .hi5{
+            margin-top:20px;
+            text-align:center;
+            display:inline-block;
+            width:390px;
+            height:200px;
+            font-size:30pt;
+             color:white;
+            vertical-align:text-top;}
+
+        #ability-box {
+            width:1600px;
+            margin:0 auto;
+            padding-top:50px;
+        }
+
+        #ability-box>h1 {
+            font-size:50pt;
+            color:white;
+            padding-bottom:50px;}
+
+        #ability-box>ul {
+            list-style:none;
+            margin-bottom:50px;
+        }
+
+        #ability-box>ul>li {
+            width:795px;
+            display:inline-block;
+            font-size:30pt;
+            color:white;
+            vertical-align:text-top;
+            
+        }
+
+        .a-list {
+            width:1600px; 
+        }
+
+        .b-list {
+            width:1600px;
+        }       
+
+        #footer {width:1600px;
+                  margin:0 auto;}
+
+        #footer>h1 {font-size:50pt;
+                    color:white;}
+
+        #contact {height:200px;}
+
+        .contact-list {
+            margin-top:50px;
+            list-style:none;
+            display:flex;
+            justify-content:space-between;
+        }
+
+        .contact-list>li {
+            color:white;
+            font-size:25pt;
+        }
+
+        .github {
+            color:white;
+            text-decoration:none;
+        }
+
+        .github:hover {
+            color:orangered;
+        }
+
+        #footer>.thank {
+            font-size:120pt;
+            text-align:center;
+            color:white;
+        }
+
+        #footer>.thank:hover {
+            color:orangered;
+        }
+    </style>
+</head>
+<body>
+    <script> 
+        AOS.init(); 
+    </script>
+    <div id="wrap">
+        <h1 class="nav-text">PORTFOLIO</h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="#nav">MAIN</a></li>
+                <li><a href="#hi3">MY WORK</a></li>
+                <li><a href="#me-box">ABOUT ME</a></li>
+                <li><a href="#ability-box">ABILITY</a></li>
+                <li><a href="#footer">CONTACT</a></li>
+            </ul>
+
+            <h1 class="hi1">hi&emsp;i'm Mun Jung<span id="clock">00:00</span></h1>
+            <p class="hi2">저는 어쩌구 저쩌구한 웹퍼블리셔 입니다. 저를 고용하시려면<br>
+                돈을 많이 주셔야 합니다. 감사합니다.
+            </p>
+            <button class="btn"><a href="#wrap">TOP</a></button>
+        </nav>
+
+        <main id="main">
+            <div id="work-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h1 id="hi3">-My work</h1>
+                <div class="work">
+                    <h2>01/</h2>
+                    <p>배경에 영상을 넣어 동적인 느낌으로 제작</p>
+                    <a href="index2.html"><img src="images/메인1.jpeg"></a>
+                </div>
+            
+                <div class="work">
+                    <h2>02/</h2>
+                    <p>이미지들을 갤러리 느낌으로 제작</p>
+                    <a href="index0.html"><img src="images/메인2.jpg"></a>
+                </div>
+ 
+                <div class="work">
+                    <h2>03/</h2>
+                    <p>1번의 구조를 바꿔 제작</p>
+                    <a href="index3.html"><img src="images/메인3.jpg"></a>
+                </div>
+
+                <div class="work">
+                    <h2>04/</h2>
+                    <p>스크롤 이동시 이미지가 부드럽게 나옴</p>
+                    <a href="index4.html"><img src="images/메인4.jpeg"></a>
+                </div>
+            </div>
+
+            <div id="me-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+               <h1 class="hi4">-about me</h1>
+               <p class="hi5 b-line">
+               i like&emsp;coffee / christmas / friends / winter / summer / music / swim <br>
+               </p>
+               <p class="hi5 b-line">my birthday / 1993 04 25 / my zodiac sign is taurus ♉️</p>
+               <p class="hi5 b-line">저는 모르는 것을 찾으며 공부하는 것을 좋아합니다.</p>
+               <p class="hi5">Lorem ipsum dolor, sit amet </p>
+            </div>
+
+            <div id="ability-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h1>-ability</h1>
+                <ul class="a-list">
+                    <li>
+                        -HTML<br>
+                         코드를 작성하여 웹페이지의 기초 토대를 다지고 반응형 페이지를 제작할 수 있습니다.
+                    </li>
+
+                    <li>
+                        -CSS<br>
+                        css의 선택자들과 css의 속성들을 활용하여 웹페이지의 상세 디자인을 작업할 수 있습니다.
+                    </li>
+                </ul>
+
+                <ul class="b-list">
+                    <li>
+                        -JAVA SCRIPT/<br>
+                          JQUERY<br>
+                        자바스크립트의 조건문, 반복문, 함수와 변수들을 활용하여 폼 검증이나 동적인 페이지효과를 구현할 수 있습니다.
+                    </li>
+
+                    <li>
+                        -Photoshop, Illustrator<br>
+                        다양한 이미지 편집과 합성이 가능합니다.
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <h1>-contact</h1>
+        <hr>
+
+        <div id="contact">
+            <ul class="contact-list">
+                <li>>phone<br>
+                    010 . 2222 . 2222
+                </li>
+
+                <li>>e-mail<br>
+                    answjd930425@gamil.com
+                </li>
+
+                <li>>notion<br>
+                    work in progress
+                </li>
+
+                <li>>github<br>
+                    <a href="https://boiledegg0425.github.io/portfolio/" target="_blank" class="github">click me</a>
+                </li>
+            </ul>
+        </div>
+        <p class="thank">thank you so much</p>
+        </footer>
+    </div>
+</body>
+<script>
+    let clock = document.getElementById("clock");
+
+    function getClock() {
+
+        let today = new Date();
+        let hours = today.getHours() % 12 ? today.getHours() % 12 : 12;
+        let minutes = today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes();
+        let ampm = today.getHours() >= 12 ? 'pm' : 'am';
+
+        clock.innerText = `${ampm} ${hours}:${minutes}`;
+    }
+    getClock();
+    setInterval(getClock, 1000);
+</script>
+</html>
