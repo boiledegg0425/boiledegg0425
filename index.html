@@ -11,10 +11,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+    <script src="https://static.cargo.site/scripts/loader.js" data-name="eyeroll"></script>
     <title>mun jung Kang</title>
 
     <script>
-      
+        $(function(){
+
+            $('.circle2').hover(
+                function(){$('.circle3').css('display', 'block');},
+                function(){$('.circle3').css('display', 'none');}
+            )
+        })
     </script>
 
     <style>
@@ -47,21 +54,51 @@
             color:white;
             border-bottom:2px solid white;}
 
+        .circle {
+            width:50px;
+            margin-left:30px;
+            animation:wink 0.5s step-end infinite;
+        }
+
+        .circle2 {
+            position:absolute;
+            left:33%;
+            top:33%;
+        }
+
+        .circle3{
+            position:absolute;
+            left:54%;
+            top:56%;
+            width:100px;
+            z-index:20;
+        }
+
+        @keyframes wink {
+
+            50% {opacity:0;}
+        }
+
         #nav>ul {list-style:none;
                  display:flex;
-                 justify-content:space-between;
+                 justify-content:space-around;
                  border-bottom:2px solid white;}
 
         #nav>ul>li>a {color:white;
                       text-decoration:none;
                       font-size:20pt;}
 
-        #nav>ul>li>a:hover {
-            filter:blur(6px);
+        #nav>ul>li:hover {
+            background:rgb(42, 255, 59);
         }
 
         #nav .hi1 {color:white;
                     font-size:50pt;}
+
+        .about-text {
+            color:white;
+            font-size:14pt;
+        }
 
         #clock {
             float:right;
@@ -132,7 +169,7 @@
 
         .contact-list>li {
             display:inline-block;
-            width:510px;
+            width:770px;
             font-size:25pt;
             text-align:center;
             margin-top:80px;
@@ -160,7 +197,7 @@
         }
 
         #skills-box>ul li {
-            margin-bottom:30px;
+            margin-bottom:100px;
         }
 
         .a-list>li>span {
@@ -174,9 +211,6 @@
             margin:30px 20px;
         }        
 
-        .b-list {
-            margin-top:150px;
-        }
 
         .b-list>li>span {
             font-size:35pt;
@@ -228,6 +262,22 @@
             transition:0.5s;
         }
 
+        .work>span {
+            color:white;
+            border:1px solid black;
+            width:750px;
+            display:block;
+            text-align:center;
+            margin-left:10px;
+            transform:translateY(0);
+            transition:1s;
+
+        }
+
+        .work>a>img:hover span{
+            transform:translateY(-300px);
+            transition:1s;
+        }
 
         #footer {width:1600px;
                   margin:0 auto;}
@@ -242,7 +292,7 @@
         }
 
         #footer>.thank:hover {
-            color:orangered;
+            color:rgb(42, 255, 59);
         }
     </style>
 </head>
@@ -251,7 +301,9 @@
         AOS.init(); 
     </script>
     <div id="wrap">
-        <h1 class="nav-text">PORTFOLIO</h1>
+        <h1 class="nav-text">PORTFOLIO<img src="images/파비콘.png" class="circle">
+            <span id="clock">00:00</span>
+        </h1>
         <nav id="nav">
             <ul>
                 <li><a href="#nav">MAIN</a></li>
@@ -261,9 +313,16 @@
                 <li><a href="#hi3">PORTFOLIO</a></li>
             </ul>
 
-            <h1 class="hi1">i'm&emsp;Mun Jung<span id="clock">00:00</span></h1>
+            <h1 class="hi1">i'm&emsp;Mun Jung</h1>
            
             <button class="btn"><a href="#wrap">TOP</a></button>
+
+            <p class="about-text">안녕하세요.<br>
+               저는 웹 퍼블리셔 강문정 입니다.<br>
+               더 알고싶다면 about을 클릭해 주세요.
+            </p>
+            <img src="images/face.png" class="circle3">
+            <img src="images/파비콘.png" class="circle2">
         </nav>
 
         <main id="main">
@@ -280,9 +339,7 @@
                         <span>-CSS</span>
                         <p>css의 선택자들과 css의 속성들을 활용하여 웹페이지의 상세 디자인을 작업할 수 있습니다.</p>
                     </li>
-                </ul>
-
-                <ul class="b-list">
+                
                     <li>
                         <span>-JAVA SCRIPT / JQUERY</span>
                           <p>자바스크립트의 조건문, 반복문, 함수와 변수들을 활용하여 폼 검증이나 동적인 페이지효과를 구현할 수 있습니다.</p>
@@ -295,6 +352,41 @@
                 </ul>
             </div>
 
+            <div id="work-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h1 id="hi3">-portfolio</h1>
+                <div class="work">
+                    <h2>01/</h2>
+                    <p>배경에 영상을 넣어 동적인 느낌으로 제작</p>
+                    <a href="index2.html"><img src="images/메인1.jpeg"></a>
+                    <span>click</span>
+                </div>
+            
+                <div class="work">
+                    <h2>02/</h2>
+                    <p>이미지들을 갤러리 느낌으로 제작</p>
+                    <a href="index0.html"><img src="images/메인2.JPG"></a>
+                    <span>click</span>
+                </div>
+ 
+                <div class="work">
+                    <h2>03/</h2>
+                    <p>1번의 구조를 바꿔 제작</p>
+                    <a href="index3.html"><img src="images/메인3.JPG"></a>
+                    <span>click</span>
+                </div>
+
+                <div class="work">
+                    <h2>04/</h2>
+                    <p>스크롤 이동시 이미지가 부드럽게 나옴</p>
+                    <a href="index4.html"><img src="images/메인4.jpeg"></a>
+                    <span>click</span>
+                </div>
+            </div>
+
+        </main>
+
+        <footer id="footer">
+
             <div id="contact">
                 <h1>-contact</h1>
                 <ul class="contact-list">
@@ -305,46 +397,10 @@
     
                     <li>
                         <span>>e-mail</span><br>
-                        answjd930425@gamil.com
-                    </li>
-    
-                    <li>
-                        <span>>home</span><br>
-                        click me
+                        mun930425@gamil.com
                     </li>
                 </ul>
             </div>
-
-            <div id="work-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <h1 id="hi3">-portfolio</h1>
-                <div class="work">
-                    <h2>01/</h2>
-                    <p>배경에 영상을 넣어 동적인 느낌으로 제작</p>
-                    <a href="index2.html"><img src="images/메인1.jpeg"></a>
-                </div>
-            
-                <div class="work">
-                    <h2>02/</h2>
-                    <p>이미지들을 갤러리 느낌으로 제작</p>
-                    <a href="index0.html"><img src="images/메인2.JPG"></a>
-                </div>
- 
-                <div class="work">
-                    <h2>03/</h2>
-                    <p>1번의 구조를 바꿔 제작</p>
-                    <a href="index3.html"><img src="images/메인3.JPG"></a>
-                </div>
-
-                <div class="work">
-                    <h2>04/</h2>
-                    <p>스크롤 이동시 이미지가 부드럽게 나옴</p>
-                    <a href="index4.html"><img src="images/메인4.jpeg"></a>
-                </div>
-            </div>
-
-        </main>
-
-        <footer id="footer">
             
         <p class="thank">thank you so much</p>
         </footer>
