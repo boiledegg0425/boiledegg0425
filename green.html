@@ -105,6 +105,7 @@
             width:750px;
             height:350px;
             margin:10px;
+            transition:0.5s;
         }
 
         .work {width:770px;
@@ -119,6 +120,12 @@
 
         .work>h2 {margin:20px;
                  color:white;}
+
+        .work>a>img:hover {
+            filter:brightness(0.2);
+            scale:1.2;
+            transition:0.5s;
+        }
 
         #me-box {border-top:5px solid white;
                  width:1600px;
@@ -192,6 +199,15 @@
         .contact-list>li {
             color:white;
             font-size:25pt;
+        }
+
+        .github {
+            color:white;
+            text-decoration:none;
+        }
+
+        .github:hover {
+            color:orangered;
         }
 
         #footer>.thank {
@@ -312,8 +328,8 @@
                     work in progress
                 </li>
 
-                <li>>home<br>
-                    010 . 2222 . 2222
+                <li>>github<br>
+                    <a href="https://boiledegg0425.github.io/portfolio/" target="_blank" class="github">click me</a>
                 </li>
             </ul>
         </div>
