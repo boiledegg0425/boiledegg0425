@@ -33,17 +33,19 @@
 
         #wrap {background:rgb(27, 135, 65);}
 
-        #nav {height:900px;}
+        #nav {
+            height:900px;
+            width:98%;
+            margin:0 auto;
+        }
 
        .nav-text {
-                   font-size:50pt;
-                   cursor:pointer;
-                   color:white;
-                  border-bottom:2px solid white;}
-
-        .nav-text:hover {
-            text-shadow:10px 0px black
-        }
+            width:98%;
+            margin:0 auto;
+            font-size:50pt;
+            cursor:pointer;
+            color:white;
+            border-bottom:2px solid white;}
 
         #nav>ul {list-style:none;
                  display:flex;
@@ -52,20 +54,14 @@
 
         #nav>ul>li>a {color:white;
                       text-decoration:none;
-                      font-size:30pt;}
+                      font-size:20pt;}
 
-        #nav>ul>li>a:hover {text-shadow:5px 0px black;}
+        #nav>ul>li>a:hover {
+            filter:blur(6px);
+        }
 
         #nav .hi1 {color:white;
                     font-size:50pt;}
-
-        #nav .hi2 {
-            color:white;
-            font-size:30pt;
-            margin-top:320px;
-            text-align:center;
-          
-        }
 
         #clock {
             float:right;
@@ -94,15 +90,117 @@
         .btn:hover {text-shadow:5px 0px black;
                     scale:1.2;}
 
+       
+        #me-box {
+            border-top:5px solid white;
+            width:1600px;
+            margin:0 auto;
+            height:1000px;
+        }
+
+        
+
+        .hi4 {font-size:50pt;
+             color:white;
+             margin-top:50px;
+             margin-bottom:100px;}
+
+        .hi5{
+            margin-top:20px;
+            display:inline-block;
+            width:390px;
+            height:200px;
+            font-size:30pt;
+            border:1px solid white;
+            vertical-align:text-top;}
+
+        #contact {
+            height:600px;
+            width:1600px;
+            margin:0 auto;
+        }
+
+        #contact>h1 {
+            color:white;
+            font-size:40pt;
+        }
+
+        .contact-list {
+            margin:50px 20px;;
+            list-style:none;
+        }
+
+        .contact-list>li {
+            display:inline-block;
+            width:510px;
+            font-size:25pt;
+            text-align:center;
+            margin-top:80px;
+        }
+
+        .contact-list>li>span {
+            color:white;
+        }
+
+        #skills-box {
+            height:1200px;
+            width:1600px;
+            margin:0 auto;
+            padding-top:50px;
+        }
+
+        #skills-box>h1 {
+            font-size:50pt;
+            color:white;
+            padding-bottom:80px;}
+
+        #skills-box>ul {
+            list-style:none;
+            margin-bottom:50px;
+        }
+
+        #skills-box>ul li {
+            margin-bottom:30px;
+        }
+
+        .a-list>li>span {
+            font-size:30pt;
+            color:white;
+            margin:10px;
+        }
+
+        .a-list>li>p {
+            font-size:25pt;
+            margin:30px 20px;
+        }        
+
+        .b-list {
+            margin-top:150px;
+        }
+
+        .b-list>li>span {
+            font-size:35pt;
+            color:white;
+            margin:10px;
+        }
+
+        .b-list>li>p {
+            font-size:25pt;
+            margin:40px 20px;
+        }        
+
         #work-box #hi3 {color:white;
                     font-size:50pt;
                    width:1600px;
                    height:150px;}
 
-        #work-box {width:1600px;
-                   margin:0 auto;
-                   display:flex;
-                   flex-flow:wrap;}
+        #work-box {
+            width:1600px;
+            height:1600px;
+            margin:0 auto;
+            display:flex;
+            flex-flow:wrap;}
+
 
         .work>a>img {
             width:750px;
@@ -116,7 +214,7 @@
                margin:13px;
                border-top:1px solid white;}
 
-        .work>p {color:white;
+        .work>p {
                  width:500px;
                  text-align:center;
                  margin:0 auto;}
@@ -130,88 +228,12 @@
             transition:0.5s;
         }
 
-        #me-box {border-top:5px solid white;
-                 width:1600px;
-                margin:0 auto;}
-
-        .b-line {border-right:3px solid white;}
-
-        .hi4 {font-size:50pt;
-             color:white;
-             margin-top:50px;
-             margin-bottom:50px;}
-
-        .hi5{
-            margin-top:20px;
-            text-align:center;
-            display:inline-block;
-            width:390px;
-            height:200px;
-            font-size:30pt;
-             color:white;
-            vertical-align:text-top;}
-
-        #ability-box {
-            width:1600px;
-            margin:0 auto;
-            padding-top:50px;
-        }
-
-        #ability-box>h1 {
-            font-size:50pt;
-            color:white;
-            padding-bottom:50px;}
-
-        #ability-box>ul {
-            list-style:none;
-            margin-bottom:50px;
-        }
-
-        #ability-box>ul>li {
-            width:795px;
-            display:inline-block;
-            font-size:30pt;
-            color:white;
-            vertical-align:text-top;
-            
-        }
-
-        .a-list {
-            width:1600px; 
-        }
-
-        .b-list {
-            width:1600px;
-        }       
 
         #footer {width:1600px;
                   margin:0 auto;}
 
         #footer>h1 {font-size:50pt;
                     color:white;}
-
-        #contact {height:200px;}
-
-        .contact-list {
-            margin-top:50px;
-            list-style:none;
-            display:flex;
-            justify-content:space-between;
-        }
-
-        .contact-list>li {
-            color:white;
-            font-size:25pt;
-        }
-
-        .github {
-            color:white;
-            text-decoration:none;
-        }
-
-        .github:hover {
-            color:orangered;
-        }
 
         #footer>.thank {
             font-size:120pt;
@@ -233,25 +255,68 @@
         <nav id="nav">
             <ul>
                 <li><a href="#nav">MAIN</a></li>
-                <li><a href="#hi3">MY WORK</a></li>
-                <li><a href="#me-box">ABOUT ME</a></li>
-                <li><a href="#ability-box">ABILITY</a></li>
-                <li><a href="#footer">CONTACT</a></li>
+                <li><a href="index5.html">ABOUT</a></li>
+                <li><a href="#skills-box">SKILLS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#hi3">PORTFOLIO</a></li>
             </ul>
 
-            <h1 class="hi1">hi&emsp;i'm Mun Jung<span id="clock">00:00</span></h1>
-            <p class="hi2">
-                저는 언제나 노력하는 신입 웹퍼블리셔 입니다.<br>
-                앞으로 많은 것을 이 곳에 채워 나가며 일 하고싶습니다.<br>
-                저의 포트폴리오를 잘 봐주시면 감사하겠습니다.<br>
-                
-            </p>
+            <h1 class="hi1">i'm&emsp;Mun Jung<span id="clock">00:00</span></h1>
+           
             <button class="btn"><a href="#wrap">TOP</a></button>
         </nav>
 
         <main id="main">
+
+             <div id="skills-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h1>-skills</h1>
+                <ul class="a-list">
+                    <li>
+                        <span>-HTML</span>
+                         <p>코드를 작성하여 웹페이지의 기초 토대를 다지고 반응형 페이지를 제작할 수 있습니다.</p>
+                    </li>
+
+                    <li>
+                        <span>-CSS</span>
+                        <p>css의 선택자들과 css의 속성들을 활용하여 웹페이지의 상세 디자인을 작업할 수 있습니다.</p>
+                    </li>
+                </ul>
+
+                <ul class="b-list">
+                    <li>
+                        <span>-JAVA SCRIPT / JQUERY</span>
+                          <p>자바스크립트의 조건문, 반복문, 함수와 변수들을 활용하여 폼 검증이나 동적인 페이지효과를 구현할 수 있습니다.</p>
+                    </li>
+
+                    <li>
+                        <span>-Photoshop, Illustrator</span>
+                        <p>다양한 이미지 편집과 합성이 가능합니다.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <h1>-contact</h1>
+                <ul class="contact-list">
+                    <li>
+                        <span>>notion</span><br>
+                        work in progress
+                    </li>
+    
+                    <li>
+                        <span>>e-mail</span><br>
+                        answjd930425@gamil.com
+                    </li>
+    
+                    <li>
+                        <span>>home</span><br>
+                        click me
+                    </li>
+                </ul>
+            </div>
+
             <div id="work-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <h1 id="hi3">-My work</h1>
+                <h1 id="hi3">-portfolio</h1>
                 <div class="work">
                     <h2>01/</h2>
                     <p>배경에 영상을 넣어 동적인 느낌으로 제작</p>
@@ -277,68 +342,10 @@
                 </div>
             </div>
 
-            <div id="me-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-               <h1 class="hi4">-about me</h1>
-               <p class="hi5 b-line">
-               i like&emsp;coffee / christmas / friends / winter / summer / music / swim <br>
-               </p>
-               <p class="hi5 b-line">my birthday / 1993 04 25 / my zodiac sign is taurus ♉️</p>
-               <p class="hi5 b-line">저는 모르는 것을 찾으며 공부하는 것을 좋아합니다.</p>
-               <p class="hi5">Lorem ipsum dolor, sit amet </p>
-            </div>
-
-            <div id="ability-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <h1>-ability</h1>
-                <ul class="a-list">
-                    <li>
-                        -HTML<br>
-                         코드를 작성하여 웹페이지의 기초 토대를 다지고 반응형 페이지를 제작할 수 있습니다.
-                    </li>
-
-                    <li>
-                        -CSS<br>
-                        css의 선택자들과 css의 속성들을 활용하여 웹페이지의 상세 디자인을 작업할 수 있습니다.
-                    </li>
-                </ul>
-
-                <ul class="b-list">
-                    <li>
-                        -JAVA SCRIPT/<br>
-                          JQUERY<br>
-                        자바스크립트의 조건문, 반복문, 함수와 변수들을 활용하여 폼 검증이나 동적인 페이지효과를 구현할 수 있습니다.
-                    </li>
-
-                    <li>
-                        -Photoshop, Illustrator<br>
-                        다양한 이미지 편집과 합성이 가능합니다.
-                    </li>
-                </ul>
-            </div>
         </main>
 
         <footer id="footer">
-            <h1>-contact</h1>
-        <hr>
-
-        <div id="contact">
-            <ul class="contact-list">
-                <li>>phone<br>
-                    010 . 2032 . 9290
-                </li>
-
-                <li>>e-mail<br>
-                    answjd930425@gamil.com
-                </li>
-
-                <li>>notion<br>
-                    work in progress
-                </li>
-
-                <li>>github<br>
-                    <a href="https://boiledegg0425.github.io/portfolio/" target="_blank" class="github">click me</a>
-                </li>
-            </ul>
-        </div>
+            
         <p class="thank">thank you so much</p>
         </footer>
     </div>
