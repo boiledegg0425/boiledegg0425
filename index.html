@@ -21,6 +21,34 @@
                 function(){$('.circle3').css('display', 'block');},
                 function(){$('.circle3').css('display', 'none');}
             )
+
+            $('.work1').hover(
+                function(){$('.click1').stop().css({'transform':'translateY(-180px)',
+                                                                 'opacity':1});},
+                function(){$('.click1').stop().css({'transform':'translateY(0px)',
+                                                                 'opacity':0});}
+            )
+
+            $('.work2').hover(
+                function(){$('.click2').stop().css({'transform':'translateY(-180px)',
+                                                                 'opacity':1});},
+                function(){$('.click2').stop().css({'transform':'translateY(0px)',
+                                                                 'opacity':0});}
+            )
+
+            $('.work3').hover(
+                function(){$('.click3').stop().css({'transform':'translateY(-180px)',
+                                                                 'opacity':1});},
+                function(){$('.click3').stop().css({'transform':'translateY(0px)',
+                                                                 'opacity':0});}
+            )
+
+            $('.work4').hover(
+                function(){$('.click4').stop().css({'transform':'translateY(-180px)',
+                                                                 'opacity':1});},
+                function(){$('.click4').stop().css({'transform':'translateY(0px)',
+                                                                 'opacity':0});}
+            )
         })
     </script>
 
@@ -262,21 +290,11 @@
             transition:0.5s;
         }
 
-        .work>span {
+        .work>p:nth-child(4) {
             color:white;
-            border:1px solid black;
-            width:750px;
-            display:block;
             text-align:center;
-            margin-left:10px;
-            transform:translateY(0);
             transition:1s;
-
-        }
-
-        .work>a>img:hover span{
-            transform:translateY(-300px);
-            transition:1s;
+            opacity:0;
         }
 
         #footer {width:1600px;
@@ -354,32 +372,32 @@
 
             <div id="work-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                 <h1 id="hi3">-portfolio</h1>
-                <div class="work">
+                <div class="work work1">
                     <h2>01/</h2>
                     <p>배경에 영상을 넣어 동적인 느낌으로 제작</p>
                     <a href="index2.html"><img src="images/메인1.jpeg"></a>
-                    <span>click</span>
+                    <p class="click1">click</p>
                 </div>
             
-                <div class="work">
+                <div class="work work2">
                     <h2>02/</h2>
                     <p>이미지들을 갤러리 느낌으로 제작</p>
                     <a href="index0.html"><img src="images/메인2.JPG"></a>
-                    <span>click</span>
+                    <p class="click2">click</p>
                 </div>
  
-                <div class="work">
+                <div class="work work3">
                     <h2>03/</h2>
                     <p>1번의 구조를 바꿔 제작</p>
                     <a href="index3.html"><img src="images/메인3.JPG"></a>
-                    <span>click</span>
+                    <p class="click3">click</p>
                 </div>
 
-                <div class="work">
+                <div class="work work4">
                     <h2>04/</h2>
                     <p>스크롤 이동시 이미지가 부드럽게 나옴</p>
                     <a href="index4.html"><img src="images/메인4.jpeg"></a>
-                    <span>click</span>
+                    <p class="click4">click</p>
                 </div>
             </div>
 
