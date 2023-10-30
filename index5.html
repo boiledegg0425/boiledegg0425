@@ -38,14 +38,14 @@
 
         #nav>ul {list-style:none;
                  display:flex;
-                 justify-content:space-between;
+                 justify-content:space-around;
                  border-bottom:2px solid white;}
 
         #nav>ul>li>a {color:white;
                       text-decoration:none;
                       font-size:20pt;}
 
-        #nav>ul>li>a:hover {
+        #nav>ul>li:hover {
             background:rgb(42, 255, 59);
         }
 
@@ -75,6 +75,41 @@
         .email {
             list-style:none;
             width:500px;
+        }
+
+        @media screen and (max-width:720px) {
+
+            #wrap {
+                height:1000px;
+            }
+
+            #nav>ul>li>a {
+                font-size:15pt;
+            }
+        }
+
+        @media screen and (max-width:420px) {
+
+            #wrap {
+                height:1200px;
+            }
+
+            #nav>ul {
+                display:inline;
+            }
+
+            #nav>ul>li {
+                text-align:center;
+                margin-bottom:10px;
+            }
+
+            #nav>ul>li>a {
+                font-size:15pt;
+            }
+
+            .about>p {
+               font-size:15pt;
+            } 
         }
     </style>
 </head>
