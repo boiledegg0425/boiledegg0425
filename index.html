@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
+    <link href="https://db.onlinewebfonts.com/c/312e1b153109eaeffbcd9227eaa6519b?family=Nimbus+Sans+Extd+D+W01+Light" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <script src="js/jquery3.7.1.js"></script>
     <!--fade up-->
@@ -56,17 +57,17 @@
         html {scroll-behavior:smooth;}
 
         * {margin:0; padding:0;
-           font-family:'Miller', 'ChosunSm';}
+           font-family:"Nimbus Sans Extd D W01 Light", 'ChosunSg';}
 
         @font-face {
-                font-family: 'ChosunSm';
-                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+                font-family: 'ChosunSg';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunSg.woff') format('woff');
                 font-weight: normal;
                 font-style: normal;
                 unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF;
         }
 
-        #wrap {background:rgb(0, 152, 46);}
+        #wrap {background:rgb(154, 209, 96);}
 
         #nav {
             height:900px;
@@ -81,27 +82,6 @@
             cursor:pointer;
             color:white;
             border-bottom:2px solid white;}
-
-        .circle {
-            width:50px;
-            margin-left:30px;
-            animation:wink 0.5s step-end infinite;
-        }
-
-        .circle2 {
-            position:absolute;
-            left:33%;
-            top:33%;
-        }
-
-        .circle3{
-            position:absolute;
-            left:54%;
-            top:56%;
-            width:100px;
-            z-index:20;
-            display:none;
-        }
 
         @keyframes wink {
 
@@ -118,7 +98,7 @@
                       font-size:20pt;}
 
         #nav>ul>li:hover {
-            background:rgb(42, 255, 59);
+            background:rgb(255, 112, 134);
         }
 
         #nav .hi1 {color:white;
@@ -126,6 +106,10 @@
 
         #clock {
             float:right;
+        }
+
+        #clock:hover {
+            color:rgb(255, 112, 134);
         }
 
         .btn {
@@ -138,10 +122,11 @@
               height:35px;
               line-height:35px;
               text-align:center;
-              background:rgb(27, 135, 65);
+              background:rgb(154, 209, 96);
               border:1px solid white;
               border-radius:20px;
               font-size:20pt;
+              box-shadow:2px 2px 5px grey;
         }
 
         .btn>a {
@@ -150,6 +135,32 @@
 
         .btn:hover {text-shadow:5px 0px black;
                     scale:1.2;}
+
+        #text-box {
+            width:100%;
+            height:25px;
+            overflow:hidden;
+            position:absolute;
+            left:0px;
+            top:870px;
+        }
+
+        #text-slide {
+            width:2400px;
+            height:25px;
+            animation:textflow 5s linear infinite;
+        }
+
+        @keyframes textflow {
+            0% {transform:translateX(0);}
+            100% {transform:translateX(-400px);}
+        }
+
+        #text-slide>p {
+            float:left;
+            width:400px;
+            line-height:25px;
+        }
 
        
         #me-box {
@@ -179,7 +190,6 @@
         #about {
             width:1600px;
             margin:0 auto;
-            border:1px solid red;
         }
 
         #about>h1 {
@@ -193,6 +203,15 @@
             padding-top:100px;
             margin-bottom:100px;
             text-align:center;
+        }
+
+        .mail>a {
+            font-size:15pt;
+            color:black;
+        }
+
+        .mail>a>span {
+            animation:wink 0.5s step-end infinite;
         }
 
         #skills-box {
@@ -216,6 +235,11 @@
             margin-bottom:100px;
         }
 
+        .a-list {
+            width:790px;
+            float:left;
+        }
+
         .a-list>li>span {
             font-size:30pt;
             color:white;
@@ -225,7 +249,23 @@
         .a-list>li>p {
             font-size:25pt;
             margin:30px 20px;
-        }        
+        }       
+        
+        .b-list {
+            width:800px;
+            float:right;
+        }
+
+        .b-list>li>span {
+            font-size:30pt;
+            color:white;
+            margin:10px;
+        }
+
+        .b-list>li>p {
+            font-size:25pt;
+            margin:30px 20px;
+        }       
 
         #work-box #hi3 {
             color:white;
@@ -235,7 +275,7 @@
 
         #work-box {
             width:1600px;
-            height:1600px;
+            height:2100px;
             margin:0 auto;
             display:flex;
             flex-flow:wrap;}
@@ -315,7 +355,7 @@
         }
 
         #footer>.thank:hover {
-            color:rgb(42, 255, 59);
+            color:rgb(255, 112, 134);
         }
 
         /*-----------------미디어 쿼리 태블릿------------------*/
@@ -332,19 +372,6 @@
 
             #clock {
                 font-size:30pt;
-            }
-
-            .circle {
-                position:absolute;
-                left:280px;
-                top:6px;
-                width:40px;
-            }
-
-            .circle2 {
-                width:400px;
-                left:23%;
-                top:45%;
             }
 
             .btn {
@@ -411,23 +438,6 @@
                 text-align:center;
             }
             
-            .circle {
-                width:25px;
-                position:absolute;
-                left:150px;
-                top:3px;
-            }
-
-            .circle2 {
-                width:300px;
-                left:63px;
-                top:500px;
-            }
-
-            .circle3 {
-                width:70px;
-                top:600px;
-            }
 
             #clock {
                 font-size:20pt;
@@ -518,7 +528,7 @@
         AOS.init(); 
     </script>
     <div id="wrap">
-        <h1 class="nav-text">PORTFOLIO<img src="images/파비콘.png" class="circle">
+        <h1 class="nav-text">PORTFOLIO
             <span id="clock">00:00</span>
         </h1>
         <nav id="nav">
@@ -530,12 +540,20 @@
                 <li><a href="#hi3">PORTFOLIO</a></li>
             </ul>
 
-            <h1 class="hi1">i'm&emsp;Mun Jung</h1>
+            <h1 class="hi1">Kang Mun Jung</h1>
            
             <button class="btn"><a href="#wrap">TOP</a></button>
 
-            <img src="images/face.png" class="circle3">
-            <img src="images/파비콘.png" class="circle2">
+            <div id="text-box">
+                <div id="text-slide">
+                    <p>merry christmas&emsp;&emsp;merry christmas</p>
+                    <p>merry christmas&emsp;&emsp;merry christmas</p>
+                    <p>merry christmas&emsp;&emsp;merry christmas</p>
+                    <p>merry christmas&emsp;&emsp;merry christmas</p>
+                    <p>merry christmas&emsp;&emsp;merry christmas</p>
+                    <p>merry christmas&emsp;&emsp;merry christmas</p>
+                </div>
+            </div>
         </nav>
 
         <main id="main">
@@ -550,6 +568,8 @@
                   앞으로 많은 것을 이 곳에 채워 나가며 일 하고싶습니다.<br>
                   감사하겠습니다.<br>
                 </p>
+                <p class="mail">e-mail :<br>
+                    <a href="mailto:mun930425@gmail.com" title="이메일 보내기" class="email">mun930425@gmail.com<span>📧</span></a></p>
               </div>
 
              <div id="skills-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
@@ -575,35 +595,53 @@
                         <p>다양한 이미지 편집과 합성이 가능합니다.</p>
                     </li>
                 </ul>
+
+                <ul class="b-list">
+                    <li>
+                        <span>-Education</span>
+                        <p>유한대학교 패션디자인과 졸업 2016</p>
+                    </li>
+
+                    <li>
+                        <p>UIUX 웹디자인 & 웹퍼블리셔 실무자 양성과정 수료 2023</p>
+                    </li>
+                </ul>
             </div>
 
             <div id="work-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                 <h1 id="hi3">-portfolio</h1>
                 <div class="work work1">
                     <h2>01/</h2>
-                    <p>배경에 영상을 넣어 동적인 느낌으로 제작</p>
-                    <a href="index2.html"><img src="images/메인1.jpeg"></a>
+                    <p>배경에 영상을 넣어 동적인 느낌으로 제작 / 제작기간 : 3일</p>
+                    <a href="index2.html" target="_blank"><img src="images/메인1.jpeg"></a>
                     <p class="click1">click</p>
                 </div>
             
                 <div class="work work2">
                     <h2>02/</h2>
-                    <p>이미지들을 갤러리 느낌으로 제작</p>
-                    <a href="index0.html"><img src="images/메인2.JPG"></a>
+                    <p>이미지들을 갤러리 느낌으로 제작 / 제작기간 : 3일</p>
+                    <a href="index0.html" target="_blank"><img src="images/메인2.JPG"></a>
                     <p class="click2">click</p>
                 </div>
  
                 <div class="work work3">
                     <h2>03/</h2>
-                    <p>1번의 구조를 바꿔 제작</p>
-                    <a href="index3.html"><img src="images/메인3.JPG"></a>
+                    <p>1번의 구조를 바꿔 제작 / 제작기간 : 3일</p>
+                    <a href="index3.html" target="_blank"><img src="images/메인3.JPG"></a>
                     <p class="click3">click</p>
                 </div>
 
                 <div class="work work4">
                     <h2>04/</h2>
-                    <p>스크롤 이동시 이미지가 부드럽게 나옴</p>
-                    <a href="index4.html"><img src="images/메인4.jpeg"></a>
+                    <p>스크롤 이동시 이미지가 부드럽게 나옴 / 제작기간 : 3일</p>
+                    <a href="index4.html" target="_blank"><img src="images/메인4.jpeg"></a>
+                    <p class="click4">click</p>
+                </div>
+
+                <div class="work work4">
+                    <h2>04/</h2>
+                    <p>주얼리 브랜드 홈페이지 제작 (반응형) / 제작기간 : 5일</p>
+                    <a href="sophie.html" target="_blank"><img src="images/메인5.png"></a>
                     <p class="click4">click</p>
                 </div>
             </div>

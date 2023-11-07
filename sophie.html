@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://db.onlinewebfonts.com/c/312e1b153109eaeffbcd9227eaa6519b?family=Nimbus+Sans+Extd+D+W01+Light" rel="stylesheet">
+    <script src="js/jquery3.7.1.js"></script>
+    <title>sophie buhai</title>
+
+    <script>
+        $(function(){
+
+            $('.nav-list>li').on('click', function(){
+
+                 $(this).find('.sub-box').css('display', 'block');
+                 $(this).siblings().children('.sub-box').css('display', 'none');
+            })
+
+            $('#slide img:gt(0)').hide();
+
+               setInterval(function(){
+                  $('#slide img:first-child').hide()
+                       .next('img').show()
+                       .end().appendTo('#slide');}, 3000);
+        })
+    </script>
+    <style>
+        * {margin:0; padding:0;}
+
+        #wrap {
+            width:100%;
+            font-family:"Nimbus Sans Extd D W01 Light";
+        }
+
+        #nav {
+            width:100%;
+            height:50px;
+        }
+
+        ul li {
+            list-style:none;
+        }
+
+        .nav-list>li {
+            width:150px;
+            height:25px;
+            text-align:center;
+            line-height:25px;
+            float:left;
+            cursor:pointer;
+        }
+
+        .nav-list>li:hover {
+            text-decoration:underline;
+            text-underline-offset:5px;
+            text-decoration-thickness:1px;
+        }
+
+        .nav-list>li.active div {
+            width:600px;
+            height:300px;
+            position:absolute;
+            left:0px;
+        }
+
+        .nav-list>li div {
+            position:absolute;
+            left:0px;
+            display:none;
+        }
+
+        .sub-box>ul>li:hover {
+            text-decoration:underline;
+            text-underline-offset:5px;
+            text-decoration-thickness:1px;
+        }
+
+        .sub-box>ul>li {
+            text-align:left;
+            margin:10px 20px;
+        }
+
+        #main {
+            width:100%;
+        }
+
+        #slide {
+            width:500px;
+            height:750px;
+            margin:0 auto;
+            overflow:hidden;
+        }
+
+        #slide>img {
+            width:500px;
+        }
+
+        #neck {
+            width:1600px;
+            margin:100px auto;
+        }
+
+        #neck>ul>li {
+            display:inline-block;
+            margin:23px;
+        }
+
+        #neck>ul>li>img {
+            width:350px;
+        }
+
+        #neck>ul>li>img:hover {
+            opacity:0.6;
+        }
+
+        #neck>ul>li>p {
+            text-align:center;
+        }
+
+        #ring {
+            width:1600px;
+            margin:0 auto;
+        }
+
+        #ring>ul>li {
+            display:inline-block;
+            margin:23px;
+        }
+
+        #ring>ul>li>p {
+            text-align:center;
+        }
+
+        #ring>ul>li>img {
+            width:350px;
+        }
+
+        #ring>ul>li>img:hover {
+            opacity:0.6;
+        }
+
+        #ring>ul>li>a>img {
+            width:350px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <nav id="nav">
+           <ul class="nav-list">
+              <li class="active">jewelry
+                 <div class="sub-box">
+                    <ul>
+                        <li>earrings</li>
+                        <li>necklaces</li>
+                        <li>bracelets</li>
+                        <li>rings</li>
+                        <li>baby</li>
+                    </ul>
+                 </div>
+              </li>
+
+              <li>hair</li>
+
+              <li>objects</li>
+
+              <li>materials
+                <div class="sub-box">
+                    <ul>
+                        <li>18K gold</li>
+                        <li>pearls</li>
+                        <li>lapis</li>
+                        <li>onyx</li>
+                        <li>jade</li>
+                        <li>quartz</li>
+                        <li>jasper</li>
+                    </ul>
+                 </div>
+              </li>
+           </ul>
+        </nav>
+
+        <main id="main">
+            <div id="slide">
+                <img src="https://www.sophiebuhai.com/cdn/shop/products/SB_Quartz-Audrey-Earrings_57020014_WEB_CROP_720x.jpg?v=1649280436">
+                <img src="https://www.sophiebuhai.com/cdn/shop/products/58250026_crop_720x.jpg?v=1678750771">
+                <img src="https://www.sophiebuhai.com/cdn/shop/products/16_720x.jpg?v=1677863782">
+                <img src="https://www.sophiebuhai.com/cdn/shop/products/20220221_DBaum_SophieBuhai0140_720x.jpg?v=1649185781">
+            </div>
+
+            <div id="neck">
+                <h3>necklaces</h3>
+                <ul>
+                    <li><img src="https://www.sophiebuhai.com/cdn/shop/products/Small_Circle_Link_Necklace_720x.jpg?v=1569226793">
+                        <p>$650</p>
+                    </li>
+
+                    <li><img src="https://www.sophiebuhai.com/cdn/shop/products/SB_Gold-Petite-Heart-Pendant57000030_WEB_BW_720x.jpg?v=1649286737">
+                        <p>$650</p>
+                    </li>
+
+                    <li><img src="https://www.sophiebuhai.com/cdn/shop/products/20230202_Lightwork_SophieBuhai23044_RT_720x.jpg?v=1677777687">
+                        <p>$650</p>
+                    </li>
+
+                    <li><img src="https://www.sophiebuhai.com/cdn/shop/products/20220902_DBaum_SophieBuhai10100_720x.jpg?v=1679689481">
+                        <p>$650</p>
+                    </li>
+                </ul>
+                <p>>>more</p>
+            </div>
+
+            <div id="ring">
+                <h3>rings</h3>
+                <ul>
+                    <li>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/20220902_DBaum_SophieBuhai9968_720x.jpg?v=1677681844">
+                        <p>$550</p>
+                    </li>
+
+                    <li>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/0023_315640-A9-012-2_1_1_720x.jpg?v=1679596321">
+                        <p>$550</p>
+                    </li>
+
+                    <li>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/20220902_DBaum_SophieBuhai10054_720x.jpg?v=1663973453">
+                        <p>$550</p>
+                    </li>
+
+                    <li>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/R22-R03-LA_5.jpg?v=1649184924">
+                        <p>$550</p>
+                    </li>
+
+                    <li>
+                        <a href="sophie2.html"><img src="https://www.sophiebuhai.com/cdn/shop/products/Ring_2_000746450009_CROP2.jpg?v=1641946444"></a>
+                        <p>$550</p>
+                    </li>
+
+                    <li>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/SB_Onyx-Large-Shell-Ring_91490029_WEB.jpg?v=1683738764">
+                        <p>$550</p>
+                    </li>
+
+                    <li>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/SB_Bagel-Rings_91400033_WEB.jpg?v=1649106574">
+                        <p>$550</p>
+                    </li>
+
+                    <li>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/SB_Silver-Ball-Ring91440009_WEB.jpg?v=1649114618">
+                        <p>$550</p>
+                    </li>
+                </ul>
+                <p>>>more</p>
+            </div>
+        </main>
+
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
