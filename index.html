@@ -219,12 +219,9 @@
             width:1600px;
             margin:0 auto;
             padding-top:50px;
+            display:flex;
+            justify-content:space-around;
         }
-
-        #skills-box>h1 {
-            font-size:50pt;
-            color:white;
-            padding-bottom:80px;}
 
         #skills-box>ul {
             list-style:none;
@@ -232,40 +229,55 @@
         }
 
         #skills-box>ul li {
-            margin-bottom:100px;
+            margin-bottom:20px;
         }
 
         .a-list {
-            width:790px;
-            float:left;
+            width:600px;
+            height:600px;
         }
 
         .a-list>li>span {
-            font-size:30pt;
+            font-size:20pt;
             color:white;
             margin:10px;
         }
 
         .a-list>li>p {
-            font-size:25pt;
-            margin:30px 20px;
+            font-size:15pt;
+            margin:20px;
         }       
         
         .b-list {
-            width:800px;
-            float:right;
+            width:600px;
+            height:200px;
         }
 
         .b-list>li>span {
-            font-size:30pt;
+            font-size:20pt;
             color:white;
             margin:10px;
         }
 
         .b-list>li>p {
-            font-size:25pt;
+            font-size:15pt;
             margin:30px 20px;
-        }       
+        }     
+        
+        .skillpic {
+            width:300px;
+            position:absolute;
+            left:120px;
+            top:600px;
+        }
+
+        .skillpic2 {
+            width:40px;
+            height:55px;
+            position:absolute;
+            left:440px;
+            top:610px;
+        }
 
         #work-box #hi3 {
             color:white;
@@ -275,10 +287,11 @@
 
         #work-box {
             width:1600px;
-            height:2100px;
+            height:1250px;
             margin:0 auto;
             display:flex;
-            flex-flow:wrap;}
+            flex-flow:wrap;
+        }
 
 
         .work>a>img {
@@ -288,10 +301,12 @@
             transition:0.5s;
         }
 
-        .work {width:770px;
-               height:510px;
-               margin:13px;
-               border-top:1px solid white;}
+        .work {
+            width:770px;
+            height:510px;
+            margin:13px;
+            border-top:1px solid white;
+        }
 
         .work>p {
                  width:500px;
@@ -573,7 +588,6 @@
               </div>
 
              <div id="skills-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <h1>-skills</h1>
                 <ul class="a-list">
                     <li>
                         <span>-HTML</span>
@@ -594,7 +608,14 @@
                         <span>-Photoshop, Illustrator</span>
                         <p>다양한 이미지 편집과 합성이 가능합니다.</p>
                     </li>
+
+                    <li>
+                        <span>-Figma</span>
+                        <p>기본적인 툴을 이용해 편집 가능합니다.</p>
+                    </li>
                 </ul>
+                <img src="images/아이콘.png" class="skillpic">
+                <img src="images/피그마.png" class="skillpic2">
 
                 <ul class="b-list">
                     <li>
@@ -605,6 +626,15 @@
                     <li>
                         <p>UIUX 웹디자인 & 웹퍼블리셔 실무자 양성과정 수료 2023</p>
                     </li>
+
+                    <li>
+                        <span>-Certificate</span>
+                        <p>gtq 1급 자격증</p>
+                    </li>
+
+                    <li>
+                        <p>운전면허 2종</p>
+                    </li>
                 </ul>
             </div>
 
@@ -612,36 +642,29 @@
                 <h1 id="hi3">-portfolio</h1>
                 <div class="work work1">
                     <h2>01/</h2>
-                    <p>배경에 영상을 넣어 동적인 느낌으로 제작 / 제작기간 : 3일</p>
-                    <a href="index2.html" target="_blank"><img src="images/메인1.jpeg"></a>
+                    <p>주얼리 브랜드 홈페이지 제작(반응형) / 제작기간 : 2일</p>
+                    <a href="sophie.html" target="_blank"><img src="images/메인5.png"></a>
                     <p class="click1">click</p>
                 </div>
             
                 <div class="work work2">
                     <h2>02/</h2>
-                    <p>이미지들을 갤러리 느낌으로 제작 / 제작기간 : 3일</p>
+                    <p>갤러리 홈페이지 제작 / 제작기간 : 1일</p>
                     <a href="index0.html" target="_blank"><img src="images/메인2.JPG"></a>
                     <p class="click2">click</p>
                 </div>
  
                 <div class="work work3">
                     <h2>03/</h2>
-                    <p>1번의 구조를 바꿔 제작 / 제작기간 : 3일</p>
+                    <p>1번의 구조를 바꿔 제작 / 제작기간 : 1일</p>
                     <a href="index3.html" target="_blank"><img src="images/메인3.JPG"></a>
                     <p class="click3">click</p>
                 </div>
 
                 <div class="work work4">
                     <h2>04/</h2>
-                    <p>스크롤 이동시 이미지가 부드럽게 나옴 / 제작기간 : 3일</p>
+                    <p>스크롤 이동시 이미지가 부드럽게 나옴 / 제작기간 : 1일</p>
                     <a href="index4.html" target="_blank"><img src="images/메인4.jpeg"></a>
-                    <p class="click4">click</p>
-                </div>
-
-                <div class="work work4">
-                    <h2>04/</h2>
-                    <p>주얼리 브랜드 홈페이지 제작 (반응형) / 제작기간 : 5일</p>
-                    <a href="sophie.html" target="_blank"><img src="images/메인5.png"></a>
                     <p class="click4">click</p>
                 </div>
             </div>
