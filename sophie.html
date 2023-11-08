@@ -22,6 +22,16 @@
                   $('#slide img:first-child').hide()
                        .next('img').show()
                        .end().appendTo('#slide');}, 3000);
+
+            $('#neck>ul>li').hover(
+                function(){$(this).find('.name').css({'opacity':1})},
+                function(){$(this).find('.name').css({'opacity':0})}
+            )
+
+            $('#ring>ul>li').hover(
+                function(){$(this).find('#bigbox').css({'opacity':1})},
+                function(){$(this).find('#bigbox').css({'opacity':0})}
+            )
         })
     </script>
     <style>
@@ -29,8 +39,10 @@
 
         #wrap {
             width:100%;
-            font-family:"Nimbus Sans Extd D W01 Light";
+            font-family: 'Oranienbaum', serif;
         }
+
+        @import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
 
         #nav {
             width:100%;
@@ -39,6 +51,13 @@
 
         ul li {
             list-style:none;
+        }
+
+        .logo {
+            font-weight:bold;
+            font-size:18pt;
+            width:200px;
+            margin:0 auto;
         }
 
         .nav-list>li {
@@ -87,12 +106,38 @@
         #slide {
             width:500px;
             height:750px;
-            margin:0 auto;
+            margin:50px auto;
             overflow:hidden;
         }
 
         #slide>img {
             width:500px;
+        }
+
+        #text-box {
+            width:100%;
+            height:25px;
+            overflow:hidden;
+            position:absolute;
+            left:0px;
+            top:870px;
+        }
+
+        #text-flow {
+            height:25px;
+            width:3000px;
+            animation:textflow 7s linear infinite;
+        }
+
+        #text-flow>p {
+            float:left;
+            width:500px;
+            line-height:25px;
+        }
+
+        @keyframes textflow {
+            0% {transform:translateX(0)}
+            100% {transform:translateX(-500px)}
         }
 
         #neck {
@@ -102,51 +147,92 @@
 
         #neck>ul>li {
             display:inline-block;
-            margin:23px;
+            margin:20px;
         }
 
         #neck>ul>li>img {
             width:350px;
-        }
-
-        #neck>ul>li>img:hover {
-            opacity:0.6;
+            transition:0.5s;
         }
 
         #neck>ul>li>p {
             text-align:center;
         }
 
+        .name {
+            color:white;
+            position:relative;
+            top:300px;
+            width:350px;
+            height:30px;
+            line-height:30px;
+            text-align:center;
+            opacity:0;
+            backdrop-filter:blur(6px);
+        }
+
         #ring {
             width:1600px;
             margin:0 auto;
+            position:relative;
         }
 
         #ring>ul>li {
             display:inline-block;
-            margin:23px;
+            margin:20px;
+            height:550px;
+            
         }
 
         #ring>ul>li>p {
             text-align:center;
+            
         }
 
         #ring>ul>li>img {
             width:350px;
-        }
-
-        #ring>ul>li>img:hover {
-            opacity:0.6;
+            transition:0.5s;
         }
 
         #ring>ul>li>a>img {
             width:350px;
+        }
+
+        .blackbox {
+            width:350px;
+            height:526px;
+            background:black;
+            opacity:0.5;
+            position:relative;
+            top:-30px;
+
+        }
+
+        .name2 {
+            position:relative;
+            top:270px;
+            width:350px;
+            height:30px;
+            line-height:30px;
+            color:white;
+            z-index:10;
+            text-align:center;
+        }
+
+        #bigbox {
+            position:relative;
+            left:0px;
+            top:-550px;
+            height:525px;
+            opacity:0;
+            transition:0.5s;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
         <nav id="nav">
+           <h2 class="logo">SOPHIE BUHAI</h2>
            <ul class="nav-list">
               <li class="active">jewelry
                  <div class="sub-box">
@@ -188,22 +274,41 @@
                 <img src="https://www.sophiebuhai.com/cdn/shop/products/20220221_DBaum_SophieBuhai0140_720x.jpg?v=1649185781">
             </div>
 
+            <div id="text-box">
+                <div id="text-flow">
+                    <p>Free shipping in jewelry and hair orders over $500.&emsp;</p>
+                    <p>Free shipping in jewelry and hair orders over $500.&emsp;</p>
+                    <p>Free shipping in jewelry and hair orders over $500.&emsp;</p>
+                    <p>Free shipping in jewelry and hair orders over $500.&emsp;</p>
+                    <p>Free shipping in jewelry and hair orders over $500.&emsp;</p>
+                    <p>Free shipping in jewelry and hair orders over $500.&emsp;</p>
+                </div>
+            </div>
+
             <div id="neck">
                 <h3>necklaces</h3>
                 <ul>
-                    <li><img src="https://www.sophiebuhai.com/cdn/shop/products/Small_Circle_Link_Necklace_720x.jpg?v=1569226793">
+                    <li>
+                        <p class="name">Small Circle Link Necklace</p>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/Small_Circle_Link_Necklace_720x.jpg?v=1569226793">
                         <p>$650</p>
                     </li>
 
-                    <li><img src="https://www.sophiebuhai.com/cdn/shop/products/SB_Gold-Petite-Heart-Pendant57000030_WEB_BW_720x.jpg?v=1649286737">
+                    <li>
+                        <p class="name">Petite Heart Pendant</p>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/SB_Gold-Petite-Heart-Pendant57000030_WEB_BW_720x.jpg?v=1649286737">
                         <p>$650</p>
                     </li>
 
-                    <li><img src="https://www.sophiebuhai.com/cdn/shop/products/20230202_Lightwork_SophieBuhai23044_RT_720x.jpg?v=1677777687">
+                    <li>
+                        <p class="name">Jasper Grecian Collar</p>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/20230202_Lightwork_SophieBuhai23044_RT_720x.jpg?v=1677777687">
                         <p>$650</p>
                     </li>
 
-                    <li><img src="https://www.sophiebuhai.com/cdn/shop/products/20220902_DBaum_SophieBuhai10100_720x.jpg?v=1679689481">
+                    <li>
+                        <p class="name">Onyx Boule Collar</p>
+                        <img src="https://www.sophiebuhai.com/cdn/shop/products/20220902_DBaum_SophieBuhai10100_720x.jpg?v=1679689481">
                         <p>$650</p>
                     </li>
                 </ul>
@@ -216,41 +321,73 @@
                     <li>
                         <img src="https://www.sophiebuhai.com/cdn/shop/products/20220902_DBaum_SophieBuhai9968_720x.jpg?v=1677681844">
                         <p>$550</p>
+                        <div id="bigbox">
+                            <p class="name2">Quartz Division Ring</p>
+                            <div class="blackbox"></div>
+                        </div>
                     </li>
 
                     <li>
                         <img src="https://www.sophiebuhai.com/cdn/shop/products/0023_315640-A9-012-2_1_1_720x.jpg?v=1679596321">
                         <p>$550</p>
+                        <div id="bigbox">
+                            <p class="name2">Jade Donut Ring</p>
+                            <div class="blackbox"></div>
+                        </div>
                     </li>
 
                     <li>
                         <img src="https://www.sophiebuhai.com/cdn/shop/products/20220902_DBaum_SophieBuhai10054_720x.jpg?v=1663973453">
                         <p>$550</p>
+                        <div id="bigbox">
+                            <p class="name2">Onyx Division Ring</p>
+                            <div class="blackbox"></div>
+                        </div>
                     </li>
 
                     <li>
                         <img src="https://www.sophiebuhai.com/cdn/shop/products/R22-R03-LA_5.jpg?v=1649184924">
                         <p>$550</p>
+                        <div id="bigbox">
+                            <p class="name2">Lapis Donut Ring</p>
+                            <div class="blackbox"></div>
+                        </div>
                     </li>
 
                     <li>
                         <a href="sophie2.html"><img src="https://www.sophiebuhai.com/cdn/shop/products/Ring_2_000746450009_CROP2.jpg?v=1641946444"></a>
                         <p>$550</p>
+                        <div id="bigbox">
+                            <p class="name2">Chalcedony Nautilus Ring</p>
+                            <div class="blackbox"></div>
+                        </div>
                     </li>
 
                     <li>
                         <img src="https://www.sophiebuhai.com/cdn/shop/products/SB_Onyx-Large-Shell-Ring_91490029_WEB.jpg?v=1683738764">
                         <p>$550</p>
+                        <div id="bigbox">
+                            <p class="name2">Onyx Shell Ring</p>
+                            <div class="blackbox"></div>
+                        </div>
                     </li>
 
                     <li>
                         <img src="https://www.sophiebuhai.com/cdn/shop/products/SB_Bagel-Rings_91400033_WEB.jpg?v=1649106574">
                         <p>$550</p>
+                        <div id="bigbox">
+                            <p class="name2">Stacking Ring Set Of Two</p>
+                            <div class="blackbox"></div>
+                        </div>
                     </li>
 
                     <li>
                         <img src="https://www.sophiebuhai.com/cdn/shop/products/SB_Silver-Ball-Ring91440009_WEB.jpg?v=1649114618">
                         <p>$550</p>
+                        <div id="bigbox">
+                            <p class="name2">Ball Ring</p>
+                            <div class="blackbox"></div>
+                        </div>
                     </li>
                 </ul>
                 <p>>>more</p>
