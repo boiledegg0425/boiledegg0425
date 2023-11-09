@@ -413,8 +413,12 @@
 
         @media screen and (max-width:720px) {
 
+            #wrap {
+                width:720px;
+            }
+
             #nav {
-                width:700px;
+                width:720px;
             }
 
             #nav-text {
@@ -429,13 +433,29 @@
                 left:600px;
             }
 
-            #skills-box {
-            width:700px;
+            #about {
+                width:720px;
             }
 
+            #skills-box {
+            width:720px;
+            
+            }
+
+            .skillpic {
+            left:10px;
+            top:700px;
+           }
+
+           .skillpic2 {
+            left:330px;
+            top:710px;
+           }
+
+
             #work-box {
-                width:700px;
-                height:2200px;
+                width:720px;
+                height:3400px;
             }
 
             .work {
@@ -445,13 +465,22 @@
                 flex:nowrap;
             }
 
+            .sub-work {
+                height:300px;
+            }
+
+            .sub-work>p {
+                margin-bottom:-50px;
+            }
+
             .work>a>img {
                 width:700px;
                 height:350px;
                 margin:0px;
                 transition:0.5s;
-        }
+           }
 
+           
             #footer {
                 height:550px;
                 width:700px;
@@ -469,13 +498,17 @@
             }
 
             #footer>.thank {
-                font-size:60pt;
+                font-size:50pt;
                 margin-top:-200px;
             }
         }
 
         /*-----------------미디어 쿼리 모바일------------------*/
         @media screen and (max-width:420px) {
+
+            #wrap {
+                width:420px;
+            }
 
             #nav {
                 width:420px;
@@ -494,25 +527,25 @@
                 font-size:20pt;
             }
 
-            .about-text {
-                text-align:center;
+            #main-menu {
+                left:10px;
+                width:400px;
             }
 
-            #nav>ul {
+            #main-menu>ul {
                 display:inline;
             }
 
-            #nav>ul>li {
+            #main-menu>ul>li {
                 text-align:center;
                 margin-bottom:10px;
+                transform:translateX(0px);
+                box-shadow:none;
+                background:none;
             }
 
-            #nav>ul>li>a {
+            #main-menu>ul>li>a {
                 font-size:15pt;
-            }
-
-            #nav .hi1 {
-                font-size:30pt;
             }
 
             .btn {
@@ -520,22 +553,50 @@
                 top:770px;
             }
 
+            #about {
+                width:420px;
+                height:1050px;
+            }
+
+            #about>p:nth-child(2) {
+                font-size:15pt;
+                padding-top:20px;
+                margin-bottom:30px;
+            }
+
+            .mail {
+                height:100px;
+            }
+
             #skills-box {
                 width:410px;
-                height:1400px;
+                height:1200px;
+                flex-flow:wrap;
+            }
+
+            .skillpic {
+                top:650px;
+            }
+
+            .skillpic2 {
+                top:660px;
             }
 
             .a-list>li>p {
-                font-size:20pt;
+                font-size:15pt;
             }
 
             .a-list>li>span {
                 font-size:20pt;
             }
 
+            .b-list {
+                height:420px;
+            }
+
             #work-box {
                 width:410px;
-                height:1550px;
+                height:2200px;
             }
 
             .work {
@@ -562,12 +623,12 @@
 
             .contact-list>li {
                 width:410px;
-                font-size:25pt;
+                font-size:20pt;
     
             }
 
             #footer>.thank {
-                font-size:35pt;
+                font-size:30pt;
                 margin-top:-150px;
                 margin-left:-280px; 
             }
