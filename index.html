@@ -50,6 +50,11 @@
                 function(){$('.click4').stop().css({'transform':'translateY(0px)',
                                                                  'opacity':0});}
             )
+
+            $('#main-menu>ul>li').hover(
+                function(){$(this).stop().css({'transform':'translateX(0px)'})},
+                function(){$(this).stop().css({'transform':'translateX(-210px)'})}
+            )
         })
     </script>
 
@@ -75,34 +80,52 @@
             margin:0 auto;
         }
 
-       .nav-text {
+       #nav-text {
             width:98%;
             margin:0 auto;
             font-size:50pt;
             cursor:pointer;
             color:white;
-            border-bottom:2px solid white;}
+        }
 
         @keyframes wink {
 
             50% {opacity:0;}
         }
 
-        #nav>ul {list-style:none;
-                 display:flex;
-                 justify-content:space-around;
-                 border-bottom:2px solid white;}
-
-        #nav>ul>li>a {color:white;
-                      text-decoration:none;
-                      font-size:20pt;}
-
-        #nav>ul>li:hover {
-            background:rgb(255, 112, 134);
+        #main-menu>ul {
+            list-style:none;
+            width:250px;
         }
 
-        #nav .hi1 {color:white;
-                    font-size:50pt;}
+        #main-menu {
+            width:250px;
+            position:absolute;
+            left:-10px;
+            top:200px;
+        }
+
+        #main-menu>ul>li {
+            transform:translateX(-210px);
+            transition:1s;
+            margin-bottom:10px;
+            background:white;
+            box-shadow:2px 2px 5px grey;
+        }
+
+        #main-menu>ul>li>a {
+            height:50px;
+            line-height:50px;
+            color:white;
+            text-decoration:none;
+            font-size:25pt;
+            text-align:center;
+            display:block;
+        }
+
+        #main-menu>ul>li:hover {
+            background:rgb(255, 112, 134);
+        }
 
         #clock {
             float:right;
@@ -289,10 +312,11 @@
 
         #work-box {
             width:1600px;
-            height:1250px;
+            height:2300px;
             margin:0 auto;
             display:flex;
             flex-flow:wrap;
+            border:1px solid red;
         }
 
 
@@ -307,7 +331,7 @@
             width:770px;
             height:510px;
             margin:13px;
-            border-top:1px solid white;
+            border:1px solid white;
         }
 
         .work>p {
@@ -383,7 +407,7 @@
                 width:700px;
             }
 
-            .nav-text {
+            #nav-text {
                 font-size:35pt;
             }
 
@@ -447,7 +471,7 @@
                 width:420px;
             }
 
-            .nav-text {
+            #nav-text {
                 font-size:20pt;
             }
 
@@ -545,19 +569,19 @@
         AOS.init(); 
     </script>
     <div id="wrap">
-        <h1 class="nav-text">PORTFOLIO
+        <h1 id="nav-text">PORTFOLIO / Kang Mun Jung
             <span id="clock">00:00</span>
         </h1>
         <nav id="nav">
-            <ul>
-                <li><a href="#nav">MAIN</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#skills-box">SKILLS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li><a href="#hi3">PORTFOLIO</a></li>
-            </ul>
-
-            <h1 class="hi1">Kang Mun Jung</h1>
+            <div id="main-menu">
+                <ul>
+                    <li><a href="#nav-text">MAIN</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills-box">SKILLS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#hi3">PORTFOLIO</a></li>
+                </ul>
+            </div>
            
             <button class="btn"><a href="#wrap">TOP</a></button>
 
@@ -648,30 +672,46 @@
                 <h1 id="hi3">-portfolio</h1>
                 <div class="work work1">
                     <h2>01/</h2>
-                    <p>주얼리 브랜드 홈페이지 제작(반응형) / 제작기간 : 2일</p>
                     <a href="sophie.html" target="_blank"><img src="images/메인5.png"></a>
                     <p class="click1">click</p>
+                </div>
+
+                <div class="work">
+                    <p>주얼리 브랜드 홈페이지 제작(반응형) / 제작기간 : 2일</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis debitis necessitatibus unde? Veniam eaque nisi quia possimus. Quam animi doloribus corporis iure porro sit cupiditate illum repellendus possimus eos?</p>
                 </div>
             
                 <div class="work work2">
                     <h2>02/</h2>
-                    <p>갤러리 홈페이지 제작 / 제작기간 : 1일</p>
                     <a href="index0.html" target="_blank"><img src="images/메인2.JPG"></a>
                     <p class="click2">click</p>
+                </div>
+
+                <div class="work">
+                    <p>갤러리 홈페이지 제작 / 제작기간 : 1일</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis debitis necessitatibus unde? Veniam eaque nisi quia possimus. Quam animi doloribus corporis iure porro sit cupiditate illum repellendus possimus eos?</p>
                 </div>
  
                 <div class="work work3">
                     <h2>03/</h2>
-                    <p>1번의 구조를 바꿔 제작 / 제작기간 : 1일</p>
                     <a href="index3.html" target="_blank"><img src="images/메인3.JPG"></a>
                     <p class="click3">click</p>
                 </div>
 
+                <div class="work">
+                    <p>1번의 구조를 바꿔 제작 / 제작기간 : 1일</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis debitis necessitatibus unde? Veniam eaque nisi quia possimus. Quam animi doloribus corporis iure porro sit cupiditate illum repellendus possimus eos?</p>
+                </div>
+
                 <div class="work work4">
                     <h2>04/</h2>
-                    <p>스크롤 이동시 이미지가 부드럽게 나옴 / 제작기간 : 1일</p>
                     <a href="index4.html" target="_blank"><img src="images/메인4.jpeg"></a>
                     <p class="click4">click</p>
+                </div>
+
+                <div class="work">
+                    <p>스크롤 이동시 이미지가 부드럽게 나옴 / 제작기간 : 1일</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis debitis necessitatibus unde? Veniam eaque nisi quia possimus. Quam animi doloribus corporis iure porro sit cupiditate illum repellendus possimus eos?</p>
                 </div>
             </div>
 
