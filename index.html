@@ -50,11 +50,6 @@
                 function(){$('.click4').stop().css({'transform':'translateY(0px)',
                                                                  'opacity':0});}
             )
-
-            $('#main-menu>ul>li').hover(
-                function(){$(this).stop().css({'transform':'translateX(0px)'})},
-                function(){$(this).stop().css({'transform':'translateX(-210px)'})}
-            )
         })
     </script>
 
@@ -73,6 +68,12 @@
         }
 
         #wrap {background:rgb(154, 209, 96);}
+
+        .line1 {
+            border:1px solid white;
+            width:98%;
+            margin:0 auto;
+        }
 
         #nav {
             height:900px;
@@ -93,24 +94,14 @@
             50% {opacity:0;}
         }
 
+        #main-menu {
+            width:250px;
+            margin:30px auto;
+        }
+
         #main-menu>ul {
             list-style:none;
             width:250px;
-        }
-
-        #main-menu {
-            width:250px;
-            position:absolute;
-            left:-10px;
-            top:200px;
-        }
-
-        #main-menu>ul>li {
-            transform:translateX(-210px);
-            transition:1s;
-            margin-bottom:10px;
-            background:white;
-            box-shadow:2px 2px 5px grey;
         }
 
         #main-menu>ul>li>a {
@@ -121,10 +112,6 @@
             font-size:25pt;
             text-align:center;
             display:block;
-        }
-
-        #main-menu>ul>li:hover {
-            background:rgb(255, 112, 134);
         }
 
         #clock {
@@ -239,6 +226,12 @@
             animation:wink 0.5s step-end infinite;
         }
 
+        .skill-text {
+            color:white;
+            font-size:50pt;
+            margin-left:20px;
+        }
+
         #skills-box {
             height:800px;
             width:1600px;
@@ -246,6 +239,11 @@
             padding-top:50px;
             display:flex;
             justify-content:space-around;
+        }
+
+        #skills-box>h1 {
+           color:white;
+           font-size:50pt;
         }
 
         #skills-box>ul {
@@ -366,7 +364,7 @@
         }
 
         #contact {
-            height:600px;
+            height:300px;
             width:1600px;
             margin:0 auto;
         }
@@ -377,8 +375,8 @@
         }
 
         .contact-list {
-            margin:50px 20px;;
             list-style:none;
+            text-align:center;
         }
 
         .contact-list>li {
@@ -438,8 +436,7 @@
             }
 
             #skills-box {
-            width:720px;
-            
+            width:720px;    
             }
 
             .skillpic {
@@ -643,6 +640,7 @@
         <h1 id="nav-text">PORTFOLIO / Kang Mun Jung
             <span id="clock">00:00</span>
         </h1>
+        <hr class="line1">
         <nav id="nav">
             <div id="main-menu">
                 <ul>
@@ -683,7 +681,8 @@
                 <p class="mail">e-mail :<br>
                     <a href="mailto:mun930425@gmail.com" title="이메일 보내기" class="email">mun930425@gmail.com<span>📧</span></a></p>
               </div>
-
+             
+             <h1 class="skill-text">- skills</h1>
              <div id="skills-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                 <ul class="a-list">
                     <li>
@@ -760,7 +759,7 @@
 
                 <div class="sub-work">
                     <p>갤러리 홈페이지 제작</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis debitis necessitatibus unde? Veniam eaque nisi quia possimus. Quam animi doloribus corporis iure porro sit cupiditate illum repellendus possimus eos?</p>
+                    <p>이미지들을 활용하여 갤러리 홈페이지를 제작 하였습니다. 이미지가 중심이 되도록 효과를 넣어 눈에 띄게 만들었습니다.</p>
                 </div>
  
                 <div class="work work3">
@@ -782,7 +781,7 @@
 
                 <div class="sub-work">
                     <p>스크롤 이동시 이미지가 부드럽게 나옴</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis debitis necessitatibus unde? Veniam eaque nisi quia possimus. Quam animi doloribus corporis iure porro sit cupiditate illum repellendus possimus eos?</p>
+                    <p>스크롤 이동시 이미지가 넘어가는 효과를 넣어 이미지를 극대화하고 돋보이게 보일 수 있게 하였습니다.</p>
                 </div>
             </div>
 
@@ -794,12 +793,7 @@
                 <h1>- contact</h1>
                 <ul class="contact-list">
                     <li>
-                        <span>>notion</span><br>
-                        work in progress
-                    </li>
-    
-                    <li>
-                        <span>>e-mail</span><br>
+                        <span>> e-mail</span><br>
                         mun930425@gamil.com
                     </li>
                 </ul>
