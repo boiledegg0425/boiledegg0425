@@ -1,84 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <title>mun jung Kang(new)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <link href="https://db.onlinewebfonts.com/c/312e1b153109eaeffbcd9227eaa6519b?family=Nimbus+Sans+Extd+D+W01+Light" rel="stylesheet">
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="js/jquery3.7.1.js"></script>
+  <link href="https://db.onlinewebfonts.com/c/312e1b153109eaeffbcd9227eaa6519b?family=Nimbus+Sans+Extd+D+W01+Light" rel="stylesheet">
+  <!-- wow -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- fullpage -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+  <title>Document</title>
   <script>
       $(function(){
 
+          $('#fullpage').fullpage({
+            scrollHorizontally:true,
+            navigation:true,
+            navigationTooltips: ["main", "about", "skills", "portfolio1", "portfolio2", "contact"],
+            anchors: ["main", "about", "skills", "portfolio1", "portfolio2", "contact"],
+            fitToSction:true
+          });
+      });
+
+    $(function(){
+
         
-        $('.circle2').hover(
-                function(){$('.circle3').css('display', 'block');},
-                function(){$('.circle3').css('display', 'none');}
-            )
+    $('.circle2').hover(
+        function(){$('.circle3').css('display', 'block');},
+        function(){$('.circle3').css('display', 'none');}
+    )
 
-            $('.work1').hover(
-                function(){$('.click1').stop().css({'transform':'translateY(-180px)',
-                                                                 'opacity':1});},
-                function(){$('.click1').stop().css({'transform':'translateY(0px)',
-                                                                 'opacity':0});}
-            )
+    $('.work1').hover(
+        function(){$('.click1').stop().css({'transform':'translateY(-180px)',
+                                                         'opacity':1});},
+        function(){$('.click1').stop().css({'transform':'translateY(0px)',
+                                                         'opacity':0});}
+    )
 
-            $('.work2').hover(
-                function(){$('.click2').stop().css({'transform':'translateY(-180px)',
-                                                                 'opacity':1});},
-                function(){$('.click2').stop().css({'transform':'translateY(0px)',
-                                                                 'opacity':0});}
-            )
+    $('.work2').hover(
+        function(){$('.click2').stop().css({'transform':'translateY(-180px)',
+                                                         'opacity':1});},
+        function(){$('.click2').stop().css({'transform':'translateY(0px)',
+                                                         'opacity':0});}
+    )
 
-            $('.work3').hover(
-                function(){$('.click3').stop().css({'transform':'translateY(-180px)',
-                                                                 'opacity':1});},
-                function(){$('.click3').stop().css({'transform':'translateY(0px)',
-                                                                 'opacity':0});}
-            )
+    $('.work3').hover(
+        function(){$('.click3').stop().css({'transform':'translateY(-180px)',
+                                                         'opacity':1});},
+        function(){$('.click3').stop().css({'transform':'translateY(0px)',
+                                                         'opacity':0});}
+    )
 
-            $('.work4').hover(
-                function(){$('.click4').stop().css({'transform':'translateY(-180px)',
-                                                                 'opacity':1});},
-                function(){$('.click4').stop().css({'transform':'translateY(0px)',
-                                                                 'opacity':0});}
-            )
-      })
+    $('.work4').hover(
+        function(){$('.click4').stop().css({'transform':'translateY(-180px)',
+                                                         'opacity':1});},
+        function(){$('.click4').stop().css({'transform':'translateY(0px)',
+                                                         'opacity':0});}
+    )
+})
   </script>
   <style>
-
-    html,body {
-      height: 100%;
-      width:100%;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    * {
+     * {
         margin:0; padding:0;
         font-family:"Nimbus Sans Extd D W01 Light", 'ChosunSg';
-    }
+     }
 
-        /* -----------nav------------ */
-        #nav {
+     /* -----------nav------------ */
+        #main {
             background:lightblue;
             width: 100%;
             height: 100%;
         }
 
-        #nav>h1 {
+        #main>h1 {
             color:white;
             font-size:50px;
             margin-left:20px;
         }
 
-        #nav>ul>li {
+        #main>ul>li {
             margin-bottom:10px;
             width:580px;
         }
@@ -89,13 +92,13 @@
             margin-left:20px;
         }
 
-        #nav>ul>li:hover {
+        #main>ul>li:hover {
             text-decoration:underline;
             text-underline-offset:5px;
             text-decoration-color:white;
         }
 
-        #nav>ul>li>a {
+        #main>ul>li>a {
             padding-left:20px;
             padding-right:20px;
             color:white;
@@ -162,24 +165,24 @@
             margin-left:20px;
         }
 
-        #skills-box {
+        #skills {
             background:lightblue;
             display:flex;
             justify-content:space-around;
             height: 100%;
         }
 
-        #skills-box>h1 {
+        #skills>h1 {
            color:white;
            font-size:50pt;
         }
 
-        #skills-box>ul {
+        #skills>ul {
             list-style:none;
             margin-bottom:50px;
         }
 
-        #skills-box>ul li {
+        #skills>ul li {
             margin-bottom:20px;
         }
 
@@ -234,20 +237,20 @@
         }
 
         /* -----------main(work-box)------------ */
-        #work-box1 #hi3 {
+        #portfolio1 #hi3 {
             color:white;
             font-size:50pt;
             width:100%;
         }
 
-        #work-box1 {
+        #portfolio1 {
             background:lightblue;
             display:flex;
             flex-flow:wrap;
             height: 100%;
         }
 
-        #work-box2 {
+        #portfolio2 {
             background:lightblue;
             height:900px;
             display:flex;
@@ -364,221 +367,184 @@
         #footer>.thank:hover {
             color:rgb(255, 112, 134);
         }
-
-        .swiper-pagination {
-            margin-right:10px;
-        }
-
-        .swiper-pagination-bullet {
-            background:transparent;
-            border:1px solid black;
-            width:10px;
-            height:10px;
-        }
-
-        .swiper-pagination-bullet-active {
-            background:rgb(0, 183, 255);
-            width:13px;
-            height:13px;
-        }
   </style>
 </head>
 <body>
-    <script> 
-        AOS.init(); 
-    </script>
-  <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div id="nav">
-            <h1>Welcome MunJung WEB</h1>
-            <ul class="nav-menu">
-                <li><a href="#nav-text">MAIN</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#skills-box">SKILLS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li><a href="#hi3">PORTFOLIO</a></li>
-            </ul>
+   <div id="fullpage">
+      <div class="section active">
+        <div id="main">
+          <h1>Welcome MunJung WEB</h1>
+          <ul class="nav-menu">
+              <li data-menuanchor="firstPage"><a href="#main">MAIN</a></li>
+              <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
+              <li data-menuanchor="thirdPage"><a href="#skills">SKILLS</a></li>
+              <li data-menuanchor="fourthPage"><a href="#portfolio1">PORTFOLIO</a></li>
+              <li data-menuanchor="fifthPage"><a href="#contact">CONTACT</a></li>
+          </ul>
 
-            <div id="text-slide">
-                <div id="text-box">
-                    <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                    <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                    <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                    <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                    <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                    <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                    <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                </div>
-             </div>
+          <div id="text-slide">
+              <div id="text-box">
+                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
+                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
+                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
+                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
+                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
+                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
+                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
+              </div>
+           </div>
         </div>
-    </div>
+      </div>
 
-    <div class="swiper-slide">
+      <div class="section">
         <div id="about">
-            <h1>- about</h1>
-                <p class="about-text">
-                  안녕하세요. 저는 강문정 입니다.<br>
-                  저는 신입 웹 퍼블리셔 입니다.<br>
-                  저는 패션 디자인을 전공했습니다.<br>
-                  처음에는 패션에 관심이 많았지만 웹에 관심이 생겼고 웹퍼블리싱을 배우게 되었습니다.<br>
-                  웹 퍼블리셔를 이제 시작하는 단계이고, 아직 경험은 없지만<br>
-                  새로운 곳에서 사람들과 만나고 좋은 경험을 더 쌓고 싶습니다.<br>
-                  앞으로 많은 것을 이 곳에 채워 나가며 일 하고싶습니다.<br>
-                  감사합니다.<br>
-                </p>
+          <h1>- about</h1>
+              <p class="about-text wow fadeInDown">
+                안녕하세요. 저는 신입 웹퍼블리셔 강문정 입니다.<br>
+                저의 전공은 원래 패션디자인 이었습니다.<br>
+                처음에는 패션에 관심이 많았지만 회사에서 일을 배우다보며 웹에 관심이 생겼고 웹퍼블리싱을 배우게 되었습니다.<br>
+                웹 퍼블리셔를 이제 시작하는 단계이고, 아직 경험은 없지만<br>
+                새로운 곳에서 사람들과 만나고 좋은 경험을 더 쌓고 싶습니다.<br>
+                앞으로 많은 것을 이 곳에 채워 나가며 일 하고싶습니다.<br>
+                감사합니다.<br>
+              </p>
         </div>
-    </div>
+      </div>
 
-    <div class="swiper-slide">
-        <div id="skills-box">
-            <h1 class="skill-text">- skills</h1>
-            <ul class="a-list">
-                <li>
-                    <span>-HTML</span>
-                     <p>코드를 작성하여 웹페이지의 기초 토대를 다지고 반응형 페이지를 제작할 수 있습니다.</p>
-                </li>
+      <div class="section">
+        <div id="skills">
+          <h1 class="skill-text">- skills</h1>
+          <ul class="a-list">
+              <li>
+                  <span>-HTML</span>
+                   <p>코드를 작성하여 웹페이지의 기초 토대를 다지고 반응형 페이지를 제작할 수 있습니다.</p>
+              </li>
 
-                <li>
-                    <span>-CSS</span>
-                    <p>css의 선택자들과 css의 속성들을 활용하여 웹페이지의 상세 디자인을 작업할 수 있습니다.</p>
-                </li>
-            
-                <li>
-                    <span>-JAVA SCRIPT / JQUERY</span>
-                      <p>자바스크립트의 조건문, 반복문, 함수와 변수들을 활용하여 폼 검증이나 동적인 페이지효과를 구현할 수 있습니다.</p>
-                </li>
+              <li>
+                  <span>-CSS</span>
+                  <p>css의 선택자들과 css의 속성들을 활용하여 웹페이지의 상세 디자인을 작업할 수 있습니다.</p>
+              </li>
+          
+              <li>
+                  <span>-JAVA SCRIPT / JQUERY</span>
+                    <p>자바스크립트의 조건문, 반복문, 함수와 변수들을 활용하여 폼 검증이나 동적인 페이지효과를 구현할 수 있습니다.</p>
+              </li>
 
-                <li>
-                    <span>-Photoshop, Illustrator</span>
-                    <p>다양한 이미지 편집과 합성이 가능합니다.</p>
-                </li>
+              <li>
+                  <span>-Photoshop, Illustrator</span>
+                  <p>다양한 이미지 편집과 합성이 가능합니다.</p>
+              </li>
 
-                <li>
-                    <span>-Figma</span>
-                    <p>기본적인 툴을 이용해 편집 가능합니다.</p>
-                </li>
-            </ul>
+              <li>
+                  <span>-Figma</span>
+                  <p>기본적인 툴을 이용해 편집 가능합니다.</p>
+              </li>
+          </ul>
 
-            <div class="skill-pic">
-                <img src="images/아이콘.png" class="skillpic">
-                <img src="images/피그마.png" class="skillpic2">
-            </div>
+          <div class="skill-pic">
+              <img src="images/아이콘.png" class="skillpic">
+              <img src="images/피그마.png" class="skillpic2">
+          </div>
 
-            <ul class="b-list">
-                <li>
-                    <span>-Education</span>
-                    <p>유한대학교 패션디자인과 졸업 2016</p>
-                </li>
+          <ul class="b-list">
+              <li>
+                  <span>-Education</span>
+                  <p>유한대학교 패션디자인과 졸업 2016</p>
+              </li>
 
-                <li>
-                    <p>UIUX 웹디자인 & 웹퍼블리셔 실무자 양성과정 수료 2023</p>
-                </li>
+              <li>
+                  <p>UIUX 웹디자인 & 웹퍼블리셔 실무자 양성과정 수료 2023</p>
+              </li>
 
-                <li>
-                    <span>-Certificate</span>
-                    <p>GTQ(그래픽기술자격) 1급 2급</p>
-                </li>
+              <li>
+                  <span>-Certificate</span>
+                  <p>GTQ(그래픽기술자격) 1급 2급</p>
+              </li>
 
-                <li>
-                    <p>ITQ(정보기술자격) 한글, 엑셀, 파워포인트 A등급</p>
-                </li>
+              <li>
+                  <p>ITQ(정보기술자격) 한글, 엑셀, 파워포인트 A등급</p>
+              </li>
 
-                <li>
-                    <p>운전면허 2종</p>
-                </li>
-            </ul>
+              <li>
+                  <p>운전면허 2종</p>
+              </li>
+          </ul>
+      </div>
+      </div>
+
+      <div class="section">
+        <div id="portfolio1">
+          <h1 id="hi3">- portfolio</h1>
+          <div class="work work1">
+              <h2>01/</h2>
+              <a href="sophie.html" target="_blank"><img src="images/메인5.png"></a>
+              <p class="click1">click</p>
+          </div>
+
+          <div class="sub-work">
+              <p>주얼리 브랜드 홈페이지 제작(반응형)</p>
+              <p>깔끔하고 심플한 컨셉으로 제작 하였습니다. 제품의 이미지를 눈에 띄게 크게 넣었고, 각 제품의 상품명은 제품 이미지에 마우스를 올리면 반응하도록 제작 하였습니다.</p>
+          </div>
+      
+          <div class="work work2">
+              <h2>02/</h2>
+              <a href="index0.html" target="_blank"><img src="images/메인2.JPG"></a>
+              <p class="click2">click</p>
+          </div>
+
+          <div class="sub-work">
+              <p>갤러리 홈페이지 제작</p>
+              <p>이미지들을 활용하여 갤러리 홈페이지를 제작 하였습니다. 이미지가 중심이 되도록 효과를 넣어 눈에 띄게 만들었습니다.</p>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="swiper-slide">
-        <div id="work-box1">
-            <h1 id="hi3">- portfolio</h1>
-            <div class="work work1">
-                <h2>01/</h2>
-                <a href="sophie.html" target="_blank"><img src="images/메인5.png"></a>
-                <p class="click1">click</p>
-            </div>
+      <div class="section">
+        <div id="portfolio2">
+          <div class="work work3">
+              <h2>03/</h2>
+              <a href="index2.html" target="_blank"><img src="images/메인3.png"></a>
+              <p class="click3">click</p>
+          </div>
 
-            <div class="sub-work">
-                <p>주얼리 브랜드 홈페이지 제작(반응형)</p>
-                <p>깔끔하고 심플한 컨셉으로 제작 하였습니다. 제품의 이미지를 눈에 띄게 크게 넣었고, 각 제품의 상품명은 제품 이미지에 마우스를 올리면 반응하도록 제작 하였습니다.</p>
-            </div>
-        
-            <div class="work work2">
-                <h2>02/</h2>
-                <a href="index0.html" target="_blank"><img src="images/메인2.JPG"></a>
-                <p class="click2">click</p>
-            </div>
+          <div class="sub-work">
+              <p>탬버린즈 홈페이지 제작</p>
+              <p>개성있는 탬버린즈의 느낌을 살려 제작했습니다. 제가 생각했을 때 떠오른 브랜드의 이미지를 더 돋보이게 제작 했습니다.</p>
+          </div>
 
-            <div class="sub-work">
-                <p>갤러리 홈페이지 제작</p>
-                <p>이미지들을 활용하여 갤러리 홈페이지를 제작 하였습니다. 이미지가 중심이 되도록 효과를 넣어 눈에 띄게 만들었습니다.</p>
-            </div>
+          <div class="work work4">
+              <h2>04/</h2>
+              <a href="index4.html" target="_blank"><img src="images/메인4.jpeg"></a>
+              <p class="click4">click</p>
+          </div>
+
+          <div class="sub-work">
+              <p>스크롤 이동시 이미지가 부드럽게 나옴</p>
+              <p>스크롤 이동시 이미지가 넘어가는 효과를 넣어 이미지를 극대화하고 돋보이게 보일 수 있게 하였습니다.</p>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="swiper-slide">
-        <div id="work-box2">
-            <div class="work work3">
-                <h2>03/</h2>
-                <a href="index2.html" target="_blank"><img src="images/메인3.png"></a>
-                <p class="click3">click</p>
-            </div>
-
-            <div class="sub-work">
-                <p>탬버린즈 홈페이지 제작</p>
-                <p>개성있는 탬버린즈의 느낌을 살려 제작했습니다. 제가 생각했을 때 떠오른 브랜드의 이미지를 더 돋보이게 제작 했습니다.</p>
-            </div>
-
-            <div class="work work4">
-                <h2>04/</h2>
-                <a href="index4.html" target="_blank"><img src="images/메인4.jpeg"></a>
-                <p class="click4">click</p>
-            </div>
-
-            <div class="sub-work">
-                <p>스크롤 이동시 이미지가 부드럽게 나옴</p>
-                <p>스크롤 이동시 이미지가 넘어가는 효과를 넣어 이미지를 극대화하고 돋보이게 보일 수 있게 하였습니다.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="swiper-slide">
+      <div class="section">
         <div id="footer">
-            <div id="contact">
-                <h1>- contact</h1>
-                <ul class="contact-list">
-                    <li>
-                        <p class="mail">e-mail :<br>
-                        <a href="mailto:mun930425@gmail.com" title="이메일 보내기" class="email">mun930425@gmail.com<span>📧</span></a></p>
-                    </li>
-                </ul>
-            </div>
-            
-            <p class="thank">thank you so much</p>
+          <div id="contact">
+              <h1>- contact</h1>
+              <ul class="contact-list">
+                  <li>
+                      <p class="mail">e-mail :<br>
+                      <a href="mailto:mun930425@gmail.com" title="이메일 보내기" class="email">mun930425@gmail.com<span>📧</span></a></p>
+                  </li>
+              </ul>
+          </div>
+          
+          <p class="thank">thank you so much</p>
         </div>
-    </div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
+      </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true,
-        pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
+   </div>
 </body>
-
+<script src="js/wow.min.js"></script>
+            <script>
+            new WOW().init();
+            </script>
 </html>
