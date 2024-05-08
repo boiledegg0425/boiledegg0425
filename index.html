@@ -12,15 +12,14 @@
   <!-- fullpage -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-  <title>Document</title>
   <script>
       $(function(){
 
           $('#fullpage').fullpage({
             scrollHorizontally:true,
             navigation:true,
-            navigationTooltips: ["main", "about", "skills", "portfolio1", "portfolio2", "contact"],
-            anchors: ["main", "about", "skills", "portfolio1", "portfolio2", "contact"],
+            navigationTooltips: ["main", "about", "skills", "portfolio1", "contact"],
+            anchors: ["1page", "2page", "3page", "4page", "5page"],
             fitToSction:true
           });
       });
@@ -33,28 +32,28 @@
         function(){$('.circle3').css('display', 'none');}
     )
 
-    $('.work1').hover(
-        function(){$('.click1').stop().css({'transform':'translateY(-180px)',
+    $('.work1>a>img').hover(
+        function(){$('.click1').stop().css({'transform':'translateY(-160px)',
                                                          'opacity':1});},
         function(){$('.click1').stop().css({'transform':'translateY(0px)',
                                                          'opacity':0});}
     )
 
-    $('.work2').hover(
+    $('.work2>a>img').hover(
         function(){$('.click2').stop().css({'transform':'translateY(-180px)',
                                                          'opacity':1});},
         function(){$('.click2').stop().css({'transform':'translateY(0px)',
                                                          'opacity':0});}
     )
 
-    $('.work3').hover(
+    $('.work3>a>img').hover(
         function(){$('.click3').stop().css({'transform':'translateY(-180px)',
                                                          'opacity':1});},
         function(){$('.click3').stop().css({'transform':'translateY(0px)',
                                                          'opacity':0});}
     )
 
-    $('.work4').hover(
+    $('.work4>a>img').hover(
         function(){$('.click4').stop().css({'transform':'translateY(-180px)',
                                                          'opacity':1});},
         function(){$('.click4').stop().css({'transform':'translateY(0px)',
@@ -72,7 +71,7 @@
         #main {
             background:lightblue;
             width: 100%;
-            height: 100%;
+            height: 100vh;
         }
 
         #main>h1 {
@@ -140,7 +139,7 @@
         /* -----------main(about)------------ */
         #about {
             background:lightblue;
-            height: 100%;
+            height:900px;
         }
 
         #about>h1 {
@@ -169,7 +168,7 @@
             background:lightblue;
             display:flex;
             justify-content:space-around;
-            height: 100%;
+            height: 100vh;
         }
 
         #skills>h1 {
@@ -236,46 +235,48 @@
             top:712px;
         }
 
-        /* -----------main(work-box)------------ */
-        #portfolio1 #hi3 {
+        /* -----------main(portfolio)------------ */
+        #hi3 {
             color:white;
             font-size:50pt;
             width:100%;
         }
 
-        #portfolio1 {
+        /* 윗부분 하얀공간 생기는거 고치기 */
+        #portfolio {
             background:lightblue;
-            display:flex;
-            flex-flow:wrap;
-            height: 100%;
+            height:100vh;
         }
 
-        #portfolio2 {
-            background:lightblue;
-            height:900px;
-            display:flex;
-            flex-flow:wrap;
-            height: 100%;
-        }
-
-        .work>a>img {
-            width:550px;
-            height:300px;
-            margin:10px 55px;
-            transition:0.5s;
+        /* 포트폴리오 보여지는 부분 */
+        #main-work {
+            border:1px solid green;
+            width:1320px;
+            height:400px;
+            position:relative;
+            margin:0 auto;
+            margin-top:170px;
+            overflow:hidden;
         }
 
         .work {
-            width:670px;
+            width:1300px;
             height:380px;
-            margin:13px 50px;
-            border-top:2px solid white;
+            margin:0 auto;
+            margin-top:20px;
         }
 
-        .work>p {
-            width:500px;
+        .work>a>img {
+            width:450px;
+            height:270px;
+            margin:10px 65px;
+            transition:0.5s;
+        }
+
+        .click {
+            width:450px;
             text-align:center;
-            margin:0 auto;
+            margin-left:65px;
         }
 
         .work>h2 {
@@ -296,15 +297,24 @@
             opacity:0;
         }
 
-        .sub-work {
-           width:770px;
-           height:380px;
-           margin:13px;
+        .sub-text {
+            float:right;
+            margin-right:100px;
+            margin-top:-200px;
+            width:600px;
+            text-align:center;
         }
 
-        .sub-work>p {
-            text-align:center;
-            margin-top:130px;
+        .left-btn {
+            position:relative;
+            top:450px;
+            left:70px;
+        }
+
+        .right-btn {
+            position:relative;
+            top:450px;
+            left:1500px;
         }
 
         /* -----------footer------------ */
@@ -371,7 +381,7 @@
 </head>
 <body>
    <div id="fullpage">
-      <div class="section active">
+    <div class="section active fp-auto-height fp-auto-height-responsive">
         <div id="main">
           <h1>Welcome MunJung WEB</h1>
           <ul class="nav-menu">
@@ -394,12 +404,12 @@
               </div>
            </div>
         </div>
-      </div>
+    </div>
 
-      <div class="section">
+    <div class="section fp-auto-height fp-auto-height-responsive">
         <div id="about">
           <h1>- about</h1>
-              <p class="about-text wow fadeInDown">
+              <p class="about-text">
                 안녕하세요. 저는 신입 웹퍼블리셔 강문정 입니다.<br>
                 저의 전공은 원래 패션디자인 이었습니다.<br>
                 처음에는 패션에 관심이 많았지만 회사에서 일을 배우다보며 웹에 관심이 생겼고 웹퍼블리싱을 배우게 되었습니다.<br>
@@ -409,9 +419,9 @@
                 감사합니다.<br>
               </p>
         </div>
-      </div>
+    </div>
 
-      <div class="section">
+    <div class="section fp-auto-height fp-auto-height-responsive">
         <div id="skills">
           <h1 class="skill-text">- skills</h1>
           <ul class="a-list">
@@ -469,63 +479,52 @@
                   <p>운전면허 2종</p>
               </li>
           </ul>
-      </div>
-      </div>
-
-      <div class="section">
-        <div id="portfolio1">
-          <h1 id="hi3">- portfolio</h1>
-          <div class="work work1">
-              <h2>01/</h2>
-              <a href="sophie.html" target="_blank"><img src="images/메인5.png"></a>
-              <p class="click1">click</p>
-          </div>
-
-          <div class="sub-work">
-              <p>주얼리 브랜드 홈페이지 제작(반응형)</p>
-              <p>깔끔하고 심플한 컨셉으로 제작 하였습니다. 제품의 이미지를 눈에 띄게 크게 넣었고, 각 제품의 상품명은 제품 이미지에 마우스를 올리면 반응하도록 제작 하였습니다.</p>
-          </div>
-      
-          <div class="work work2">
-              <h2>02/</h2>
-              <a href="index0.html" target="_blank"><img src="images/메인2.JPG"></a>
-              <p class="click2">click</p>
-          </div>
-
-          <div class="sub-work">
-              <p>갤러리 홈페이지 제작</p>
-              <p>이미지들을 활용하여 갤러리 홈페이지를 제작 하였습니다. 이미지가 중심이 되도록 효과를 넣어 눈에 띄게 만들었습니다.</p>
-          </div>
         </div>
-      </div>
+    </div>
 
-      <div class="section">
-        <div id="portfolio2">
-          <div class="work work3">
-              <h2>03/</h2>
-              <a href="index2.html" target="_blank"><img src="images/메인3.png"></a>
-              <p class="click3">click</p>
-          </div>
+    <div class="section fp-auto-height fp-auto-height-responsive">
+        <button class="left-btn">left</button>
+        <button class="right-btn">right</button>
+        <div id="portfolio">
+            <h1 id="hi3">- portfolio</h1>
 
-          <div class="sub-work">
-              <p>탬버린즈 홈페이지 제작</p>
-              <p>개성있는 탬버린즈의 느낌을 살려 제작했습니다. 제가 생각했을 때 떠오른 브랜드의 이미지를 더 돋보이게 제작 했습니다.</p>
-          </div>
+            <div id="main-work">
+                <div class="work work1">
+                    <h2>01/</h2>
+                    <a href="sophie.html" target="_blank"><img src="images/메인5.png"></a>
+                    <p class="click click1">click</p>
+                    <p class="sub-text">- 주얼리 브랜드 홈페이지 제작(반응형) -<br>
+                    깔끔하고 심플한 컨셉으로 제작 하였습니다. 제품의 이미지를 눈에 띄게 크게 넣었고, 각 제품의 상품명은 제품 이미지에 마우스를 올리면 반응하도록 제작 하였습니다.</p>
+                </div>
 
-          <div class="work work4">
-              <h2>04/</h2>
-              <a href="index4.html" target="_blank"><img src="images/메인4.jpeg"></a>
-              <p class="click4">click</p>
-          </div>
+                <div class="work work2">
+                    <h2>02/</h2>
+                    <a href="index0.html" target="_blank"><img src="images/메인2.JPG"></a>
+                    <p class="click click2">click</p>
+                    <p class="sub-text">- 갤러리 홈페이지 제작 -<br>
+                    이미지들을 활용하여 갤러리 홈페이지를 제작 하였습니다. 이미지가 중심이 되도록 효과를 넣어 눈에 띄게 만들었습니다.</p>
+                </div>
 
-          <div class="sub-work">
-              <p>스크롤 이동시 이미지가 부드럽게 나옴</p>
-              <p>스크롤 이동시 이미지가 넘어가는 효과를 넣어 이미지를 극대화하고 돋보이게 보일 수 있게 하였습니다.</p>
-          </div>
+                <div class="work work3">
+                    <h2>03/</h2>
+                    <a href="index2.html" target="_blank"><img src="images/메인3.png"></a>
+                    <p class="click click3">click</p>
+                    <p class="sub-text">- 탬버린즈 홈페이지 제작 -<br>
+                    개성있는 탬버린즈의 느낌을 살려 제작했습니다. 제가 생각했을 때 떠오른 브랜드의 이미지를 더 돋보이게 제작 했습니다.</p>
+                </div>
+
+                <div class="work work4">
+                    <h2>04/</h2>
+                    <a href="index4.html" target="_blank"><img src="images/메인4.jpeg"></a>
+                    <p class="click click4">click</p>
+                    <p class="sub-text">- 스크롤 이동시 이미지가 부드럽게 나옴 -<br>
+                    스크롤 이동시 이미지가 넘어가는 효과를 넣어 이미지를 극대화하고 돋보이게 보일 수 있게 하였습니다.</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <div class="section">
+      <div class="section fp-auto-height fp-auto-height-responsive">
         <div id="footer">
           <div id="contact">
               <h1>- contact</h1>
@@ -547,4 +546,31 @@
             <script>
             new WOW().init();
             </script>
+
+<script>
+    let workSlide = document.querySelectorAll('.work');
+    let leftBtn = document.querySelector('.left-btn');
+    let rightBtn = document.querySelector('.right-btn');
+    let num = 0;
+    imgshow();
+
+    function imgshow() {
+        for(let i=0; i<workSlide.length; i++) {
+            workSlide[i].style.display='none';
+        }
+        workSlide[num].style.display='block';
+    }
+
+    leftBtn.onclick=function(){
+        if(num<=0) {num=workSlide.length-1}
+        else (num -= 1);
+        imgshow();
+    }
+
+    rightBtn.onclick=function(){
+        if(num>=workSlide.length-1) {num=0}
+        else(num += 1);
+        imgshow();
+    }
+</script>
 </html>
