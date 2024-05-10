@@ -8,7 +8,7 @@
   <script src="js/jquery3.7.1.js"></script>
   <link href="https://db.onlinewebfonts.com/c/312e1b153109eaeffbcd9227eaa6519b?family=Nimbus+Sans+Extd+D+W01+Light" rel="stylesheet">
   <!-- wow -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="./wow/animate.css"/>
   <!-- fullpage -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
@@ -16,11 +16,11 @@
       $(function(){
 
           $('#fullpage').fullpage({
-            scrollHorizontally:true,
             navigation:true,
-            navigationTooltips: ["main", "about", "skills", "portfolio1", "contact"],
+            navigationTooltips: ["main", "about", "skills", "portfolio", "contact"],
             anchors: ["1page", "2page", "3page", "4page", "5page"],
-            fitToSction:true
+            fitToSction:true,
+            scrollBar:true
           });
       });
 
@@ -40,21 +40,21 @@
     )
 
     $('.work2>a>img').hover(
-        function(){$('.click2').stop().css({'transform':'translateY(-180px)',
+        function(){$('.click2').stop().css({'transform':'translateY(-160px)',
                                                          'opacity':1});},
         function(){$('.click2').stop().css({'transform':'translateY(0px)',
                                                          'opacity':0});}
     )
 
     $('.work3>a>img').hover(
-        function(){$('.click3').stop().css({'transform':'translateY(-180px)',
+        function(){$('.click3').stop().css({'transform':'translateY(-160px)',
                                                          'opacity':1});},
         function(){$('.click3').stop().css({'transform':'translateY(0px)',
                                                          'opacity':0});}
     )
 
     $('.work4>a>img').hover(
-        function(){$('.click4').stop().css({'transform':'translateY(-180px)',
+        function(){$('.click4').stop().css({'transform':'translateY(-160px)',
                                                          'opacity':1});},
         function(){$('.click4').stop().css({'transform':'translateY(0px)',
                                                          'opacity':0});}
@@ -66,6 +66,10 @@
         margin:0; padding:0;
         font-family:"Nimbus Sans Extd D W01 Light", 'ChosunSg';
      }
+
+    body,html {
+       overflow: hidden !important;
+    }
 
      /* -----------nav------------ */
         #main {
@@ -160,16 +164,17 @@
 
         /* -----------main(skill)------------ */
         .skill-text {
+            background:lightblue;
             color:white;
             font-size:50pt;
-            margin-left:20px;
+            padding-left:20px;
         }
 
         #skills {
             background:lightblue;
             display:flex;
-            justify-content:space-around;
-            height: 100vh;
+            justify-content:space-evenly;
+            height:820px;
         }
 
         #skills>h1 {
@@ -189,7 +194,8 @@
         .a-list {
             width:600px;
             height:600px;
-            margin-top:150px;
+            margin-top:80px;
+            margin-left:100px;
         }
 
         .a-list>li>span {
@@ -206,7 +212,7 @@
         .b-list {
             width:600px;
             height:400px;
-            margin-top:150px;
+            margin-top:80px;
         }
 
         .b-list>li>span {
@@ -219,21 +225,21 @@
             font-size:15pt;
             margin:30px 20px;
         }
+
+        .skill-pic {
+            position:absolute;
+            top:700px;
+            left:230px;
+        }
         
-        .skillpic {
+        .skillpic1 {
             width:300px;
             height:75px;
-            position:absolute;
-            left:310px;
-            top:700px;
         }
 
         .skillpic2 {
             width:40px;
             height:55px;
-            position:absolute;
-            left:620px;
-            top:712px;
         }
 
         /* -----------main(portfolio)------------ */
@@ -387,11 +393,11 @@
         <div id="main">
           <h1>Welcome MunJung WEB</h1>
           <ul class="nav-menu">
-              <li data-menuanchor="firstPage"><a href="#main">MAIN</a></li>
-              <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
-              <li data-menuanchor="thirdPage"><a href="#skills">SKILLS</a></li>
-              <li data-menuanchor="fourthPage"><a href="#portfolio1">PORTFOLIO</a></li>
-              <li data-menuanchor="fifthPage"><a href="#contact">CONTACT</a></li>
+              <li><a href="#1page">MAIN</a></li>
+              <li><a href="#2page">ABOUT</a></li>
+              <li><a href="#3page">SKILLS</a></li>
+              <li><a href="#4page">PORTFOLIO</a></li>
+              <li><a href="#5page">CONTACT</a></li>
           </ul>
 
           <div id="text-slide">
@@ -411,10 +417,10 @@
     <div class="section fp-auto-height fp-auto-height-responsive">
         <div id="about">
           <h1>- about</h1>
-              <p class="about-text">
+              <p class="about-text wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.2s">
                 안녕하세요. 저는 신입 웹퍼블리셔 강문정 입니다.<br>
                 저의 전공은 원래 패션디자인 이었습니다.<br>
-                처음에는 패션에 관심이 많았지만 회사에서 일을 배우다보며 웹에 관심이 생겼고 웹퍼블리싱을 배우게 되었습니다.<br>
+                처음에는 패션에 관심이 많았지만 회사에서 일을 배우다보며 웹에 흥미가 생겼고 웹퍼블리싱을 배우게 되었습니다.<br>
                 웹 퍼블리셔를 이제 시작하는 단계이고, 아직 경험은 없지만<br>
                 새로운 곳에서 사람들과 만나고 좋은 경험을 더 쌓고 싶습니다.<br>
                 앞으로 많은 것을 이 곳에 채워 나가며 일 하고싶습니다.<br>
@@ -424,9 +430,9 @@
     </div>
 
     <div class="section fp-auto-height fp-auto-height-responsive">
+        <h1 class="skill-text">- skills</h1>
         <div id="skills">
-          <h1 class="skill-text">- skills</h1>
-          <ul class="a-list">
+          <ul class="a-list wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.2s">
               <li>
                   <span>-HTML</span>
                    <p>코드를 작성하여 웹페이지의 기초 토대를 다지고 반응형 페이지를 제작할 수 있습니다.</p>
@@ -453,12 +459,12 @@
               </li>
           </ul>
 
-          <div class="skill-pic">
-              <img src="images/아이콘.png" class="skillpic">
+          <div class="skill-pic wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.2s">
+              <img src="images/아이콘.png" class="skillpic1">
               <img src="images/피그마.png" class="skillpic2">
           </div>
 
-          <ul class="b-list">
+          <ul class="b-list wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.2s">
               <li>
                   <span>-Education</span>
                   <p>유한대학교 패션디자인과 졸업 2016</p>
@@ -545,7 +551,7 @@
 
    </div>
 </body>
-<script src="js/wow.min.js"></script>
+<script src="./wow/wow.min.js"></script>
             <script>
             new WOW().init();
             </script>
