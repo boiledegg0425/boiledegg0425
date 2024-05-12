@@ -61,42 +61,40 @@
     )
 })
 
-    $(function(){
+        $(function(){
 
-    var slide = 1;
+        let pages = 0;
+        let positionValue = 0;
+        const imageWidth = 1300;
 
-    $('.left-btn').on('click', function(){
-        if(slide == 4){
-            $('.main-work').css('transform', 'translateX(-3900px)');
-            slide = 3;
-        } else if(slide == 3){
-            $('.main-work').css('transform', 'translateX(-2600px)');
-            slide = 2;
-        } else if(slide == 2){
-            $('.main-work').css('transform', 'translateX(-1300px)');
-            slide = 1;
-        } else if(slide == 1){
-            $('.main-work').css('transform', 'translateX(-0px)');
-            slide = 4;
+        const rightBtn = document.querySelector('.right-btn');
+        const leftBtn = document.querySelector('.left-btn');
+        const workList = document.querySelector('.main-work');
+
+        function next(){
+            if(pages < 3){
+                leftBtn.removeAttribute('disabled')
+                positionValue -= imageWidth;
+                workList.style.transform = `translateX(${positionValue}px)`;
+                pages += 1;
+            } 
         }
-    })
 
-    $('.right-btn').on('click', function(){
-        if(slide == 1){
-            $('.main-work').css('transform', 'translateX(-1300px)');
-            slide = 2;
-        } else if(slide == 2){
-            $('.main-work').css('transform', 'translateX(-2600px)');
-            slide = 3;
-        } else if(slide == 3){
-            $('.main-work').css('transform', 'translateX(-3900px)');
-            slide = 4;
-        } else if(slide == 4){
-            $('.main-work').css('transform', 'translateX(-0px)');
-            slide = 1;
+        function back(){
+            if(pages > 0){
+                rightBtn.removeAttribute('disabled')
+                positionValue += imageWidth;
+                workList.style.transform = `translateX(${positionValue}px)`;
+                pages -= 1;
+            }
         }
-    })
-    })
+
+        function init(){
+            leftBtn.addEventListener('click', back);
+            rightBtn.addEventListener('click', next);
+        }
+            init();
+        })
   </script>
   <style>
      * {
@@ -295,30 +293,23 @@
         .main-box {
            width:1300px;
            height:380px;
-           position:relative;
            margin:0 auto;
            margin-top:170px;
            overflow:hidden;
+           border:1px solid red;
         }
 
         /* 포트폴리오 보여지는 부분 */
         .main-work {
             width:5200px;
             height:380px;
-            position:absolute;
-            margin:0 auto;
-            list-style:none;
-            transition: all 1s;
-        }
-
-        .main-work li {
-            float:left;
+            display:flex;
+            transition: transform 0.8s;
         }
 
         .work {
             width:1300px;
             height:380px;
-            margin:0 auto;
         }
 
         .work>a>img {
@@ -545,39 +536,39 @@
             <h1 id="hi3">- portfolio</h1>
             
             <div class="main-box">
-                <ul class="main-work">
-                    <li class="work work1">
+                <div class="main-work">
+                    <div class="work work1">
                         <h2>01/</h2>
                         <a href="sophie.html" target="_blank"><img src="images/메인5.png"></a>
                         <p class="click click1">click</p>
                         <p class="sub-text">- 주얼리 브랜드 홈페이지 제작(반응형) -<br>
                         깔끔하고 심플한 컨셉으로 제작 하였습니다. 제품의 이미지를 눈에 띄게 크게 넣었고, 각 제품의 상품명은 제품 이미지에 마우스를 올리면 반응하도록 제작 하였습니다.</p>
-                    </li>
+                    </div>
 
-                    <li class="work work2">
+                    <div class="work work2">
                         <h2>02/</h2>
                         <a href="index0.html" target="_blank"><img src="images/메인2.JPG"></a>
                         <p class="click click2">click</p>
                         <p class="sub-text">- 갤러리 홈페이지 제작 -<br>
                         이미지들을 활용하여 갤러리 홈페이지를 제작 하였습니다. 이미지가 중심이 되도록 효과를 넣어 눈에 띄게 만들었습니다.</p>
-                    </li>
+                    </div>
 
-                    <li class="work work3">
+                    <div class="work work3">
                         <h2>03/</h2>
                         <a href="index2.html" target="_blank"><img src="images/메인3.png"></a>
                         <p class="click click3">click</p>
                         <p class="sub-text">- 탬버린즈 홈페이지 제작 -<br>
                         개성있는 탬버린즈의 느낌을 살려 제작했습니다. 제가 생각했을 때 떠오른 브랜드의 이미지를 더 돋보이게 제작 했습니다.</p>
-                    </li>
+                    </div>
 
-                    <li class="work work4">
+                    <div class="work work4">
                         <h2>04/</h2>
                         <a href="index4.html" target="_blank"><img src="images/메인4.jpeg"></a>
                         <p class="click click4">click</p>
                         <p class="sub-text">- 스크롤 이동시 이미지가 부드럽게 나옴 -<br>
                         스크롤 이동시 이미지가 넘어가는 효과를 넣어 이미지를 극대화하고 돋보이게 보일 수 있게 하였습니다.</p>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
