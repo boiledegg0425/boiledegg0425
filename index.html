@@ -182,14 +182,46 @@
             margin-left:20px;
         }
 
-        #about>p {
-            font-size:20pt;
-            line-height:50px;
+        .about-box>p {
+            font-size:15pt;
+            line-height:30px;
             text-align:center;
         }
 
-        .about-text {
-            margin-top:200px;
+        .about-box {
+            display:grid;
+            grid-template-columns: 200px 800px;
+            column-gap:70px;
+            justify-content: space-around;
+            border-radius:30px;
+            background:rgb(255, 255, 255, 0.5);
+            width:80%;
+            height:700px;
+            margin:50px auto;
+            box-shadow:2px 2px 5px gray;
+            border:1px solid white;
+        }
+
+        .mePic {
+            width:200px;
+            margin-top:50px;
+            border-radius:20px;
+            box-shadow:2px 2px 10px rgb(185, 185, 185);
+        }
+
+        .about-text1 {
+            height:300px;
+        }
+
+        .about-text2 {
+            width:850px;
+            height:300px;
+            margin-top:50px;
+        }
+
+        .about-text3 {
+            border:1px solid red;
+            height:300px;
         }
 
         /* -----------main(skill)------------ */
@@ -542,15 +574,27 @@
     <div class="section fp-auto-height fp-auto-height-responsive">
         <div id="about">
           <h1>- about</h1>
-              <p class="about-text wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.2s">
-                안녕하세요. 저는 신입 웹퍼블리셔 강문정 입니다.<br>
+            <div class="about-box wow slideInLeft" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <img src="./images/me.jpg" class="mePic">
+                <p class="about-text2">
+                안녕하세요. 신입 웹퍼블리셔 강문정 입니다.<br>
                 저의 전공은 원래 패션디자인 이었습니다.<br>
                 처음에는 패션에 관심이 많았지만 회사에서 일을 배우다보며 웹에 흥미가 생겼고 웹퍼블리싱을 배우게 되었습니다.<br>
                 웹 퍼블리셔를 이제 시작하는 단계이고, 아직 경험은 없지만<br>
                 새로운 곳에서 사람들과 만나고 좋은 경험을 더 쌓고 싶습니다.<br>
                 앞으로 많은 것을 이 곳에 채워 나가며 일 하고싶습니다.<br>
                 감사합니다.<br>
-              </p>
+                </p>
+                <p class="about-text1">
+                    "저의 목표는<br>
+                    이 분야에서<br>
+                    최고가 되는것 입니다.<br>
+                    기회를 주신다면<br>
+                    제 능력을 키워<br>
+                    증명해 보이고 싶습니다!"
+                  </p>
+                <p class="about-text3">어쩌구 저쩌구 블라블라 </p>
+            </div>
         </div>
     </div>
 
