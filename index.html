@@ -60,30 +60,6 @@
                                                          'opacity':0});}
     )
 })
-
-        $(function(){
-
-            var slideIndex = 0;
-            var slides = $('.main-work li');
-            var totalSlides = slides.length;
-            var slideWidth = slides.width();
-            var firstSlide = slides.find('li').first()
-
-            $('.right-btn').click(function() {
-                slideIndex = (slideIndex + 1) % totalSlides;
-                updateSlider();
-            });
-
-            $('.left-btn').click(function() {
-                slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
-                updateSlider();
-            });
-
-            function updateSlider() {
-                var slidePosition = -slideIndex * slideWidth;
-                $('.main-work').css('transform', 'translateX(' + slidePosition + 'px)');
-            }
-        })
   </script>
   <style>
      * {
@@ -474,6 +450,8 @@
                 top:230px;
             }
 
+
+            /* ---------about----------*/
             #about {
                 width:768px;
                 height:100vh;
@@ -481,6 +459,8 @@
                 padding-top:23px;
             }
 
+
+            /* ---------skills----------*/
             #skills {
                 width:768px;
                 height:1024px;
@@ -496,6 +476,8 @@
                 left:110px;
             }
 
+
+            /* ---------portfolio----------*/
             #portfolio {
                 width:768px;
                 height:1024px;
@@ -530,6 +512,7 @@
                 left:630px;
             }
 
+            /* ---------footer----------*/
             #footer {
                 padding-top:23px;
                 width:768px;
@@ -660,8 +643,10 @@
     </div>
 
     <div class="section fp-auto-height fp-auto-height-responsive">
-        <button class="left-btn"><</button>
-        <button class="right-btn">></button>
+        <div class="arrow">
+           <button class="left-btn"><</button>
+           <button class="right-btn">></button>
+        </div>
 
         <div id="portfolio">
             <h1 id="hi3">- portfolio</h1>
@@ -725,5 +710,61 @@
 <script src="./wow/wow.min.js"></script>
             <script>
             new WOW().init();
-            </script>
+
+    // 포트폴리오 슬라이드
+    const sliderWrap =  document.querySelector('.main-box');
+    const listBox = sliderWrap.querySelector('.main-work');
+    const slideLis = listBox.querySelectorAll('li')
+    const moveButton = document.querySelector('.arrow');
+
+    const clone1 = slideLis[0].cloneNode(true);
+    const cloneLast = slideLis[slideLis.length - 1].cloneNode(true);
+    listBox.insertBefore(cloneLast, slideLis[0]);
+    listBox.appendChild(clone1);
+
+    let currentIdx = 0;
+    let translate = 0;
+    const speedTime = 500;
+
+    const sliderCloneLis = listBox.querySelectorAll('li');
+    const liWidth = slideLis[0].clientWidth;
+    const sliderWidth = liWidth * sliderCloneLis.length;
+    listBox.style.width = `${sliderWidth}px`;
+    currentIdx = 1;
+    translate = -liWidth;
+    listBox.style.transform = `translateX(${translate}px)`
+
+    moveButton.addEventListener('click', moveSlide);
+
+    function move(D) {
+      currentIdx += (-1 * D);
+      translate += liWidth * D;
+      listBox.style.transform = `translateX(${translate}px)`;
+      listBox.style.transition = `all ${speedTime}ms ease`
+    }
+
+    function moveSlide(event) {
+      event.preventDefault();
+      if (event.target.className === 'right-btn') {
+        move(-1);
+        if (currentIdx === sliderCloneLis.length -1)
+          setTimeout(() => {
+            listBox.style.transition = 'none';
+            currentIdx = 1;
+            translate = -liWidth;
+            listBox.style.transform = `translateX(${translate}px)`;
+          }, speedTime);
+      } else {
+          move(1);
+          if (currentIdx === 0) {
+            setTimeout(() => {
+              listBox.style.transition = 'none';
+              currentIdx = sliderCloneLis.length -2;
+              translate = -(liWidth * currentIdx);
+              listBox.style.transform = `translateX(${translate}px)`;
+            }, speedTime);
+          }
+        }
+    }
+</script>
 </html>
