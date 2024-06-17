@@ -33,28 +33,28 @@
     )
 
     $('.work1>a>img').hover(
-        function(){$('.click1').stop().css({'transform':'translateY(-160px)',
+        function(){$('.click1').stop().css({'transform':'translateY(-155px)',
                                                          'opacity':1});},
         function(){$('.click1').stop().css({'transform':'translateY(0px)',
                                                          'opacity':0});}
     )
 
     $('.work2>a>img').hover(
-        function(){$('.click2').stop().css({'transform':'translateY(-160px)',
+        function(){$('.click2').stop().css({'transform':'translateY(-155px)',
                                                          'opacity':1});},
         function(){$('.click2').stop().css({'transform':'translateY(0px)',
                                                          'opacity':0});}
     )
 
     $('.work3>a>img').hover(
-        function(){$('.click3').stop().css({'transform':'translateY(-160px)',
+        function(){$('.click3').stop().css({'transform':'translateY(-155px)',
                                                          'opacity':1});},
         function(){$('.click3').stop().css({'transform':'translateY(0px)',
                                                          'opacity':0});}
     )
 
     $('.work4>a>img').hover(
-        function(){$('.click4').stop().css({'transform':'translateY(-160px)',
+        function(){$('.click4').stop().css({'transform':'translateY(-155px)',
                                                          'opacity':1});},
         function(){$('.click4').stop().css({'transform':'translateY(0px)',
                                                          'opacity':0});}
@@ -86,7 +86,7 @@
 
         #main>ul>li {
             margin-bottom:10px;
-            width:580px;
+            width:660px;
         }
 
         .nav-menu {
@@ -108,7 +108,7 @@
         #main>ul>li>a:after {
             content:"";
             display:block;
-            border-bottom:1px solid white;
+            border-bottom:1px solid rgb(0, 183, 255);
             transition:transform 0.5s;
             transform:scaleX(0);
         }
@@ -139,6 +139,7 @@
             float:left;
             width:400px;
             font-style:italic;
+            text-align:center;
         }
 
         @keyframes textflow {
@@ -156,12 +157,14 @@
             font-size:50pt;
             color:white;
             margin-left:20px;
+            text-shadow:2px 2px 7px rgb(0, 183, 255);
         }
 
         .about-box>p {
             font-size:15pt;
             line-height:30px;
             text-align:center;
+            border:1px solid red;
         }
 
         .about-box {
@@ -207,6 +210,7 @@
             color:white;
             font-size:50pt;
             padding-left:20px;
+            text-shadow:2px 2px 7px rgb(0, 183, 255);
         }
 
         #skills {
@@ -267,8 +271,8 @@
 
         .skill-pic {
             position:absolute;
-            top:700px;
-            left:245px;
+            top:620px;
+            left:1000px;
         }
         
         .skillpic1 {
@@ -287,6 +291,7 @@
             font-size:50pt;
             width:100%;
             margin-left:20px;
+            text-shadow:2px 2px 7px rgb(0, 183, 255);
         }
 
         #portfolio {
@@ -300,6 +305,7 @@
            margin:0 auto;
            margin-top:170px;
            overflow:hidden;
+           border-radius:20px;
         }
 
         /* 포트폴리오 보여지는 부분 */
@@ -307,7 +313,7 @@
             list-style:none;
             width:5200px;
             height:380px;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s ease;    
         }
 
         .main-work li {
@@ -319,7 +325,6 @@
             width:1300px;
             height:380px;
             background:rgba(255, 255, 255, 0.3);
-            border-radius:20px;
         }
 
         .work>a>img {
@@ -332,7 +337,7 @@
         .click {
             width:450px;
             text-align:center;
-            margin-left:65px;
+            margin-left:70px;
         }
 
         .work>h2 {
@@ -363,40 +368,34 @@
 
         .left-btn {
             position:absolute;
-            top:245px;
+            top:400px;
             left:110px;
             cursor:pointer;
             border:none;
             background:none;
             color:white;
             font-size:60px;
-            height:380px;
-            width:50px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
+            transition:0.3s;
         }
 
         .left-btn:hover {
-            background:rgba(255, 249, 249, 0.3);
+            text-shadow:2px 2px 5px rgb(100, 100, 100);
         }
 
         .right-btn {
             position:absolute;
-            top:245px;
+            top:400px;
             left:1550px;
             cursor:pointer;
             border:none;
             background:none;
             color:white;
             font-size:60px;
-            height:380px;
-            width:50px;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
+            transition:0.3s;
         }
 
         .right-btn:hover {
-            background:rgba(255, 249, 249, 0.3);
+            text-shadow:-2px 2px 5px rgb(100, 100, 100);
         }
 
         /* -----------footer------------ */
@@ -414,6 +413,7 @@
         #contact>h1 {
             color:white;
             font-size:50pt;
+            text-shadow:2px 2px 7px rgb(0, 183, 255);
         }
 
         .contact-list {
@@ -552,24 +552,24 @@
         <div id="main">
           <h1>Welcome MunJung WEB</h1>
           <ul class="nav-menu">
-              <li><a href="#1page">(MAIN)</a></li>
-              <li><a href="#2page">(ABOUT)</a></li>
-              <li><a href="#3page">(SKILLS)</a></li>
-              <li><a href="#4page">(PORTFOLIO)</a></li>
-              <li><a href="#5page">(CONTACT)</a></li>
+              <li><a href="#1page">MAIN /</a></li>
+              <li><a href="#2page">ABOUT /</a></li>
+              <li><a href="#3page">SKILLS /</a></li>
+              <li><a href="#4page">PORTFOLIO /</a></li>
+              <li><a href="#5page">CONTACT /</a></li>
           </ul>
 
-          <div id="text-slide">
+            <div id="text-slide">
               <div id="text-box">
-                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
-                  <p>web publisher&emsp;&emsp;&emsp;web publisher</p>
+                  <p>hello~&emsp;&emsp;&emsp;hello~</p>
+                  <p>hello~&emsp;&emsp;&emsp;hello~</p>
+                  <p>hello~&emsp;&emsp;&emsp;hello~</p>
+                  <p>hello~&emsp;&emsp;&emsp;hello~</p>
+                  <p>hello~&emsp;&emsp;&emsp;hello~</p>
+                  <p>hello~&emsp;&emsp;&emsp;hello~</p>
+                  <p>hello~&emsp;&emsp;&emsp;hello~</p>
               </div>
-           </div>
+            </div>
         </div>
     </div>
 
@@ -665,8 +665,8 @@
 
     <div class="section fp-auto-height fp-auto-height-responsive">
         <div class="arrow">
-           <button class="left-btn"><</button>
-           <button class="right-btn">></button>
+           <button class="left-btn">&#9664;</button>
+           <button class="right-btn">&#9654;</button>
         </div>
 
         <div id="portfolio">
