@@ -71,6 +71,19 @@
        overflow: hidden !important;
     }
 
+    /* 마우스 따라다니는 원 */
+    .circleDot {
+        position:absolute;
+        top:0;
+        left:0;
+        width:50px;
+        height:50px;
+        border-radius:50%;
+        filter:blur(5px);
+        background:radial-gradient(circle at 50% 50%, rgb(0, 183, 255), #d2ffd3);
+        transform:translate(-50%, -50%);
+    }
+
      /* -----------nav------------ */
         #main {
             background:lightblue;
@@ -285,7 +298,7 @@
             top:620px;
             left:1000px;
         }
-        
+
         .skillpic1 {
             width:300px;
             height:75px;
@@ -553,6 +566,7 @@
 <body>
    <div id="fullpage">
     <div class="section active fp-auto-height fp-auto-height-responsive">
+        <div class="circleDot"></div>
         <div id="main">
           <h1>Welcome MunJung WEB</h1>
           <ul class="nav-menu">
@@ -612,7 +626,7 @@
     <div class="section fp-auto-height fp-auto-height-responsive">
         <h1 class="skill-text">- skills</h1>
         <div id="skills">
-          <ul class="a-list wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.2s">
+          <ul class="a-list wow slideInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
               <li>
                   <span>-HTML</span>
                    <p>코드를 작성하여 웹페이지의 기초 토대를 다지고 반응형 페이지를 제작할 수 있습니다.</p>
@@ -639,12 +653,12 @@
               </li>
           </ul>
 
-          <div class="skill-pic wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.2s">
+          <div class="skill-pic wow slideInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
               <img src="images/아이콘.png" class="skillpic1">
               <img src="images/피그마.png" class="skillpic2">
           </div>
 
-          <ul class="b-list wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.2s">
+          <ul class="b-list wow slideInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
               <li>
                   <span>-Education</span>
                   <p>유한대학교 패션디자인과 졸업 2016</p>
@@ -794,5 +808,15 @@
           }
         }
     }
+
+    // 마우스 따라다니는 효과
+    const circleDot = document.querySelector('.circleDot');
+    document.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        circleDot.style.left = mouseX + "px";
+        circleDot.style.top = mouseY + "px";
+    });
 </script>
 </html>
